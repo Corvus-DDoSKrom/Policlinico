@@ -62,9 +62,9 @@ mysqli_close($conn);
                     <table class="blueTable">
                         <thead>
                             <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">ESPECIALIDAD</th>
-                                <th scope="col">ACCIÓN</th>
+                                <th scope="col">ID</th> <!--ES LA ID DE ESPECIALIDAD-->
+                                <th scope="col">ESPECIALIDAD</th> <!--ES LA ESPECIALIDAD-->
+                                <th scope="col">ACCIÓN</th>  <!--ACCION DE LA ESPECIALIDAD-->
                             </tr>
                         </thead>
                         <tbody id="datos">
@@ -80,8 +80,9 @@ mysqli_close($conn);
                                 </td>
                             </tr>
                             <?php 
-                            }
-                            mysqli_free_result($result);
+                            }    
+                            mysqli_free_result($result); 
+                            
                             ?>
                         </tbody>
                     </table>
