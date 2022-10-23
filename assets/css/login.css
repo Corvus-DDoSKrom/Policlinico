@@ -1,0 +1,90 @@
+/*Esto se aplica a todo el codigo*/
+* {
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+/*En el body se agrega el fondo de imagen*/
+body{
+    background-image: url(../img/wallpaper.png);
+}
+
+/*form login se colocan todos los estilos para el contenedor del login*/
+.form-login{
+    width: 400px;
+    height: 410px;
+    background: #4e4d4d;
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 20px 30px;
+    border-top: 4px solid #4d9ad1;
+    color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+/*h2 es el titulo de "Bienvenido"*/
+.form-login h2{
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #fff;
+    font-size: 25px;
+}
+/* La parte de los campos de texto y boton*/
+.controls {
+    width: 100%;
+    border: 1px solid #4d9ad1;
+    margin-bottom: 15px;
+    padding: 7px 5px;
+}
+
+/*estilo del icono*/
+.icono{
+    font-size: 100px;
+    margin-left: 118px;
+}
+/*Estilo y comportamiento del boton*/
+.myButton {
+    width: 100%;
+    box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	background-color:#007dc1;
+	border-radius:3px;
+	border:1px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:24px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+    margin-top: 5px;
+}
+/*Este codigo es para que el boton cambie del color al clicar sobre el */
+.myButton:hover {
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	background-color:#0061a7;
+}
+
+/*Movimiento al hacer clic sobre el boton*/
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.check{
+    width: 5%;
+    height: 20px;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+.controls-2{
+    width: 50%;
+    border: 1px solid #d6d6d6;
+    padding: 5px;
+    font-size: 18px;
+}

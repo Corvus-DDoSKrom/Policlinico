@@ -1,0 +1,561 @@
+*{
+    /* para que siempre se adapte al borde de la ventana*/
+    box-sizing: border-box; 
+    margin: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body{
+    background-image: url(../img/wallpaper.png);
+    width:100%;
+    margin: 0 auto;
+    min-width:600px;
+    max-width:2000px;
+}
+
+.site-logo{
+    width: 110px;
+    height: 20px;
+    transition: transform .2s;
+}
+
+.site-logo:hover{
+    transform: scale(1.3);
+}
+
+.logo{
+    color: black;
+    text-decoration:none;
+    float: left;
+    width: 5%;
+    padding-top: 10px;
+    padding-left: 15px;
+    align-items: flex-end;
+}
+
+.nav-bar{
+    background-color: #4d9ad1;
+    width: 100%;
+    padding: 15px;
+}
+
+/* llamamos a nuestra clase menuhorizontal*/
+
+.menuhorizontal{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menuhorizontal a{
+    position: relative;
+    color: black;
+    text-decoration: none;
+    float: left;
+    font-size: 22px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin-right: 20px;
+}
+
+/*para que al colocar el puntero encima cambie de color*/
+
+.menuhorizontal a::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #ffffff;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.menuhorizontal a:hover{
+    color: #ffffff;
+}
+
+.menuhorizontal a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/*para dar formato al block, el bloque vertical - overflow hidden para que englove correctametne al contenido*/
+
+.menu{
+    width: 100%;
+    background-color: #0096FF;
+}
+
+.menuvertical-1{
+    background-color: #4d9ad1;
+    position: relative;
+    float: left;
+    width: 13%;
+    margin-right: 5px;
+}
+
+
+/*llamanos a la clase menuvertical esl display:block; es lo que da apariencia vertical*/
+.menuvertical-1 a{
+    align-items: center;
+    position: relative;
+    color: black;
+    text-decoration: none;
+    float: left;
+    font-size: 18px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    margin-bottom: 20px;
+}
+
+.menuvertical-1 a::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #ffffff;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.menuvertical-1 a:hover{
+    color: #ffffff;
+}
+
+.menuvertical-1 a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.menuvertical-2{
+    background-color: #4d9ad1;
+    float: left;
+    width: 14%;
+    padding-bottom: 70px
+}
+
+
+/*llamanos a la clase menuvertical esl display:block; es lo que da apariencia vertical*/
+.menuvertical-2 a{
+    background-color: #4d9ad1;
+    position: relative;
+    color: black;
+    text-decoration: none;
+    float: left;
+    font-size: 24px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.menuvertical-2 a::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #ffffff;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.menuvertical-2 a:hover{
+    color: #ffffff;
+}
+
+.menuvertical-2 a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/*PARA LAS ESPECIALIDADES*/
+/* llamamos a nuestra clase menuhorizontal*/
+.especialidades a{
+    background-color: #4d9ad1;
+    color: black;
+    text-decoration:none;
+    float: right;
+    width: 20%;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.form-1{
+    width: 85%;
+    padding-bottom: 567px;
+    background-color: #f5f5f59a;
+    margin-top: 15px;
+    margin-left: 280px;
+    border: solid;
+    border-color: #9e9d9d;
+    border-width: 1.5px;
+}
+
+.form-2{
+    width:100%;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+.form-3{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-4{
+    display: flex;
+    width: 100%;
+}
+
+.form-5{
+    display: flex;
+    width: 86%;
+    padding-bottom: 40px;
+    background-color: #f5f5f59a;
+    margin-top: 15px;
+    border: solid;
+    border-color: #9e9d9d;
+    border-width: 1.5px;
+}
+
+.form-6{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.form-7{
+    width:100%;
+    height: 100%;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+.form-8{
+    display: flex;
+    width: 86%;
+    height: 100%;
+    padding-bottom: 40px;
+    background-color: #f5f5f59a;
+    margin-top: 15px;
+    border: solid;
+    border-color: #9e9d9d;
+    border-width: 1.5px;
+}
+
+.form-right{
+    width: 50%;
+}
+
+.form-left{
+    width: 50%;
+}
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	background-color:#007dc1;
+	border-radius:3px;
+	border:1px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:25px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+}
+
+.myButton:hover {
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	background-color:#0061a7;
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.myButton-del {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	padding:6px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
+}
+.myButton-del:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	background-color:#bc3315;
+}
+.myButton-del:active {
+	position:relative;
+	top:1px;
+}
+
+.myButton-edit {
+	box-shadow:inset 0px 1px 0px 0px #9acc85;
+	background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+	background-color:#74ad5a;
+    border-radius:3px;
+	border:1px solid #3b6e22;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	padding:6px 16px;
+	text-decoration:none;
+}
+.myButton-edit:hover {
+	background:linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+	background-color:#68a54b;
+}
+.myButton-edit:active {
+	position:relative;
+	top:1px;
+}
+
+.myButton_patient {
+	box-shadow:inset 0px 1px 0px 0px #54a3f7;
+	background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+	background-color:#007dc1;
+	border-radius:3px;
+	border:1px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:24px;
+	width: 100%;
+    height: 100%;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+    text-align: center;
+}
+
+.myButton_patient:hover {
+	background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+	background-color:#0061a7;
+}
+
+.myButton_patient:active {
+	position:relative;
+	top:1px;
+}
+
+h1{
+    font-size: 50px;
+}
+
+.controls-1 {
+    width: 23%;
+    border: 1px solid #d6d6d6;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 16px;
+    font-size: 20px;
+}
+
+.controls-2{
+    width: 50%;
+    border: 1px solid #d6d6d6;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.controls-3{
+    width: 15px;
+}
+
+.controls-4{
+    width: 10%;
+    border: 1px solid #d6d6d6;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.controls-5{
+    width: 10%;
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
+.controls-6{
+    width: 80%;
+    border: 1px solid #d6d6d6;
+    padding: 5px;
+    font-size: 16px;
+    resize: none;
+}
+
+.controls-7{
+    margin-top: 68px;
+}
+
+.controls-8{
+    width: 100%;
+}
+
+.check{
+    width: 5%;
+    height: 20px;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+.check-1{
+    width: 5%;
+    height: 20px;
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-left: -10px;
+}
+
+.check-div{
+    margin-top: 5px;
+}
+
+.all-1{
+    width: 100%;
+    height: 100%;
+}
+
+.all-2{
+    width: 100%;
+    height: 700px;
+}
+
+.div-user{
+    display: flex;
+    float: left;
+}
+
+.div-add-user{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.div-users{
+    width: 100%;
+}
+
+table.blueTable {
+    border: 1px solid #1C6EA4;
+    background-color: #EEEEEE;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+table.blueTable td, table.blueTable th {
+    border: 1px solid #AAAAAA;
+    padding: 3px 2px;
+}
+table.blueTable tbody td {
+    font-size: 18px;
+}
+table.blueTable tr:nth-child(even) {
+    background: #D0E4F5;
+}
+table.blueTable thead {
+    background: #1C6EA4;
+    background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    border-bottom: 2px solid #444444;
+}
+table.blueTable thead th {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-left: 2px solid #D0E4F5;
+}
+table.blueTable thead th:first-child {
+    border-left: none;
+}
+
+table.blueTable tfoot {
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: #D0E4F5;
+    background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+    background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+    background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+    border-top: 2px solid #444444;
+}
+table.blueTable tfoot td {
+    font-size: 14px;
+}
+table.blueTable tfoot .links {
+    text-align: right;
+}
+table.blueTable tfoot .links a{
+    display: inline-block;
+    background: #1C6EA4;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+ /*CALENDARIO */
+ .styled-calendar-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* CONSULTORIO */
+
+.btn-agregar-conculta{
+    background: #4d9ad1;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    border: 3px solid white;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+.btn-agregar-conculta:hover, .btn-agregar-conculta:focus, .btn-agregar-conculta:active{
+    background: #5aace6;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}

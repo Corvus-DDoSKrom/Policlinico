@@ -1,0 +1,27 @@
+ErrorDocument 404 errors/404.html
+ErrorDocument 403 errors/403.html
+
+Options +FollowSymLinks
+RewriteEngine on
+
+RewriteRule ^login$ index.php
+RewriteRule ^agenda$ agenda.php
+RewriteRule ^consulting_room$ consulting_room.php
+RewriteRule ^student$ students.php
+RewriteRule ^edit_student$ edit_students.php
+RewriteRule ^register_student$ register_student.php
+RewriteRule ^patient$ patient.php
+RewriteRule ^register_patient$ register_patient.php
+RewriteRule ^doctor$ doctor.php
+RewriteRule ^edit_doctor$ edit_doctor.php
+RewriteRule ^register_doctor$ register_doctor.php
+RewriteRule ^user$ users.php
+RewriteRule ^edit_user$ edit_user.php
+RewriteRule ^register_user$ register_user.php
+RewriteRule ^specialty$ specialty.php
+RewriteRule ^edit_specialty$ edit_specialty.php
+RewriteRule ^register_specialty$ register_specialty.php
+RewriteRule ^reception_panel$ reception_panel.php
+RewriteRule ^admin_panel$ admin_panel.php
+RewriteRule ^error-403$ errors/403.html
+RewriteRule ^error-404$ errors/404.html
