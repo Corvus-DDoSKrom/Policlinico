@@ -77,7 +77,7 @@ Alumnos
 * Dictionary Gadget Generate
 * Configuration Metasploit
 * Search Exploit DataBase
-* Download Shells L4bs For Shell
+* 
 
 Tecnología
 ==================
