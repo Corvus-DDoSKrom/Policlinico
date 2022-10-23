@@ -82,8 +82,6 @@ Alumnos
 Tecnología
 ==================
 
-[![JavaScript](https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png)]()
-[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white&labelColor=101010)]()
 
 DESARROLADORES
 ==================
