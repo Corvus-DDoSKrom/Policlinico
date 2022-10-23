@@ -26,35 +26,26 @@ mysqli_close($conn);
     </style>
 </head>
 <body>
-    <!--Este es el inicio del menu horizontal -->
+    <!-- Menu -->
     <div class="nav-bar">
         <a class="logo" href="panel_admin"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
             <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a> <!--este apartado esta para cerrar la sesion de la cuenta ingresada -->
         </nav>
     </div>
-    <!--Fin del menu horizontal -->
-    <!--Inicio del menu vertical -->
     <div class="all-1">
         <div class="menu">
             <nav class="menuvertical-1">
                 <a href="panel_admin"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
-                <!--este apartado esta para abrir los usuarios registrados -->
                 <a href="doctor"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
-                <!--este apartado esta para abrir los profesionales encargados -->
                 <a href="student"><i class="fa-solid fa-graduation-cap"></i> Alumnos</a>
-                <!--este apartado esta para abrir los Alumnos registrados -->
                 <a href="register_specialty"><i class="fa-solid fa-stethoscope"></i> Especialidades</a>
-                <!--este apartado esta para abrir la lista de las especialidades -->
-                <a href="user"><i class="fa-solid fa-user"></i> Usuario</a> 
-                <!--este apartado esta para abrir los usuarios registrados -->
-                <a href="about.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
-                <!--este apartado esta para abrir el menu de ayuda -->
+                <a href="user"><i class="fa-solid fa-user"></i> Usuario</a>
+                <a href="about.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a
             </nav>
         </div>
-    <!--Fin del menu vertical -->
 
-    <!--Inicio de la seccion de doctor -->
+    <!-- Seccion de doctor -->
         <div class="form-5">
             <div class="form-2">
                 <div class="div-users">
@@ -62,21 +53,22 @@ mysqli_close($conn);
                         <h1>DOCTOR</h1>
                     </div>
                     <div class="div-add-user">
-                        <a class="myButton" href="register_doctor"><i class="fa-solid fa-plus"></i> Añadir doctor</a><!--este apartado es para el boton de añadir doctores -->
+                        <a class="myButton" href="register_doctor"><i class="fa-solid fa-plus"></i> Añadir doctor</a>
                     </div>
                 </div>
-                <!--Inicio de la tabla en donde se visualizara los datos del doctor -->
+                
+                <!--Datos del doctor -->
                 <fieldset class="form-4">
                     <table class="blueTable">
                         <thead>
                             <tr>
-                                <th scope="col">ID</th><!--Este apartado sirve para mostrar el id del doctor -->
-                                <th scope="col">NOMBRE</th><!--Este apartado sirve para mostrar el nombre del doctor -->
-                                <th scope="col">APELLIDO</th><!--Este apartado sirve para mostrar el Apellido del doctor -->
-                                <th scope="col">E-MAIL</th><!--Este apartado sirve para mostrar la cedula de identidad del doctor -->
-                                <th scope="col">TELÉFONO</th><!--Este apartado sirve para mostrar la matricula del doctor -->
-                                <th scope="col">DIRECCIÓN</th><!--Este apartado sirve para mostrar la seccion en donde se encuentra el doctor -->
-                                <th scope="col">ACCIÓN</th><!--Este apartado sirve para realizar la accion de modificar o eliminar doctores -->
+                                <th scope="col">ID</th>
+                                <th scope="col">NOMBRE</th>
+                                <th scope="col">APELLIDO</th>
+                                <th scope="col">E-MAIL</th>
+                                <th scope="col">TELÉFONO</th>
+                                <th scope="col">DIRECCIÓN</th>
+                                <th scope="col">ACCIÓN</th>
                             </tr>
                         </thead>
                         <tfoot>
@@ -87,7 +79,8 @@ mysqli_close($conn);
                         </tr>
                         </tfoot>
                         <tbody id="datos">
-                            <?php /* Este codigo recorre los datos de la tabla de la base de datos*/
+                            
+                            <?php /* Recorre los datos de la tabla de la base de datos*/
                             foreach($result as $row){
                             ?>
                             <tr>
@@ -110,11 +103,9 @@ mysqli_close($conn);
                         </tbody>
                     </table>
                 </fieldset>
-                <!--Fin de la tabla en donde se visualiza los datos del doctor -->
                 </br>
             </div>
         </div>
-        <!--Fin de la seccion de doctor -->
     </div>
 </body>
 </html>
