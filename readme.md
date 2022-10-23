@@ -1,22 +1,22 @@
-Gadget Pentesting Tool
+Software Policlinico
 =======================
 
-Scripts y futuro framework que tiene como objetivo ser una utilidad para rendir el OSCP. 
+Repositorio el cual contiene el codigo fuente del software Policlinico 
 
-             _____      _ _      _ _       _           
-            |  __ \    | (_)    | (_)     (_)          
-            | |__) |__ | |_  ___| |_ _ __  _  ___ ___  
-            |  ___/ _ \| | |/ __| | | '_ \| |/ __/ _ \ 
-            | |  | (_) | | | (__| | | | | | | (_| (_) |
-            |_|   \___/|_|_|\___|_|_|_| |_|_|\___\___/ 
+     _____      _ _      _ _       _           
+    |  __ \    | (_)    | (_)     (_)          
+    | |__) |__ | |_  ___| |_ _ __  _  ___ ___  
+    |  ___/ _ \| | |/ __| | | '_ \| |/ __/ _ \ 
+    | |  | (_) | | | (__| | | | | | | (_| (_) |
+    |_|   \___/|_|_|\___|_|_|_| |_|_|\___\___/ 
 
 
-    Herramienta desarrollada por Snifer
+Software desarrollado por alumnos del 4to año de la carrera Ingeniería Informática.
 
 Modulos:
 
-Reconnaissance (Information Gathering)
---------------------------------------
+Usuarios
+--------
 
  * Hack Search
     - Google
@@ -33,8 +33,8 @@ Reconnaissance (Information Gathering)
 * Reverse IP
 * GEO IP
 
-Scanning
---------
+Administrador
+-------------
 
 * Nmap
   - Identificador de  OS (Mac, Windows, Linux, IOS, Desconocido, Fortinent,impresoras,IDS/IPS Apagados)
@@ -49,8 +49,8 @@ Scanning
 
         (Aun no se por donde meterle con Shodan o Vulnscan aun en modo noob ;). )
 
-Explotation
------------
+Recepcionista
+-------------
         (Sin tomar en cuenta que será esto? :| aun dudas existenciales)
 
 * Metasploit
@@ -60,8 +60,8 @@ Explotation
 * Wifi
 
 
-Web Hacking
------------
+Doctor
+------
 
 * Crawling Web SIte
 * SQLi Search
@@ -71,17 +71,24 @@ Web Hacking
 * Panel Admin Finder
 * Fuzzer Web
 
-Tools Gadget
-------------
+Alumnos
+-------
 
 * Dictionary Gadget Generate
 * Configuration Metasploit
 * Search Exploit DataBase
 * Download Shells L4bs For Shell
 
-Backdoors Rootkits
-------------------
-EX - DESARROLADORES
+Tecnología
 ==================
 
-StateX
+[![JavaScript](https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png)]()
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white&labelColor=101010)]()
+
+DESARROLADORES
+==================
+
+Marciano Rafael Morinigo Rojas
+Alcides Ruben Niz Sosa
+Rubén Dario Barrios Centurión
+María Gisselle González González
