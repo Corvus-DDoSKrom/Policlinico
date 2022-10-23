@@ -87,7 +87,7 @@ Tecnología
 DESARROLADORES
 ==================
 
-Marciano Rafael Morinigo Rojas
-Alcides Ruben Niz Sosa
-Rubén Dario Barrios Centurión
-María Gisselle González González
+* Marciano Rafael Morinigo Rojas
+* Alcides Ruben Niz Sosa
+* Rubén Dario Barrios Centurión
+* María Gisselle González González
