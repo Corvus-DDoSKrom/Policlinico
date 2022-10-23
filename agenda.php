@@ -49,6 +49,7 @@ mysqli_close($conn);
     </style>
 </head>
 <body>
+    <!-- Menus -->
     <div class="nav-bar">
         <a class="logo" href="panel_reception"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
@@ -72,6 +73,8 @@ mysqli_close($conn);
                         <div id="CalendarioWeb">
                         </div>
                     </div>
+                    
+                    <!-- MODAL AL EDITAR DESDE EL CALENDARIO: eventos de click y desplazamiento, botones -->
                     <script>
                         $(document).ready(function(){
                             $('#CalendarioWeb').fullCalendar({
@@ -121,7 +124,7 @@ mysqli_close($conn);
                             });
                         });
                     </script>
-                    <!-- Modal -->
+                    <!-- MODAL -->
                     <div class="modal fade" id="ModalEventos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
@@ -213,6 +216,8 @@ mysqli_close($conn);
                         </div>
                         </div>
                     </div>
+            
+                    <!-- MODAL al agregar nuevo evento / consultorio -->
                     <script>
                         var NuevoEvento;
 
