@@ -62,7 +62,7 @@ if($privilege_admin !='ADMINISTRADOR'){
                                 </br>
                                 <select class="controls-2" name="privilege" id="tipo_usuario">Privilegio 
                                     <option value="1">ADMINISTRADOR</option>
-                                    <option value="2">DOCENTE</option>
+                                    <option value="2">DOCTOR</option>
                                     <option value="3">ALUMNO</option>
                                     <option value="4">RECEPCIONISTA</option>
                                 </select>

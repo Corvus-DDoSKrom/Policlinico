@@ -22,7 +22,7 @@ if(isset($_POST["buttonlogin"])){
             elseif($privilege==2){ /*este apartado registra si el usuario es docente*/
                 header("location:doctor_panel");
                 $_SESSION['user_logged_in'] = TRUE;
-                $_SESSION['privilege'] = 'DOCENTE';
+                $_SESSION['privilege'] = 'DOCTOR';
             }
             elseif($privilege==3){ /*este apartado registra si el usuario es alumno*/
                 header("location:alumno_panel");

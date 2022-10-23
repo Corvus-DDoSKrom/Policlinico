@@ -85,7 +85,7 @@ mysqli_close($conn);
                                             echo "ADMINISTRADOR";   /**SECELECCIONANDO ADM IMGRESA ADM */
                                         }
                                         elseif($privilege==2){
-                                            echo "DOCENTE";       /**SECIONANDO DOCENTE INGRESA DOCENTE */
+                                            echo "DOCTOR";       /**SECIONANDO DOCENTE INGRESA DOCENTE */
                                         }
                                         elseif($privilege==3){
                                             echo "ALUMNO";         /**SELECCIONANDO ALUMNO SALTA LA PANTALLA ALUMNO */
