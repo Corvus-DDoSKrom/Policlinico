@@ -4,13 +4,13 @@ require_once './config/connection.php';
 if (isset($_SESSION['user_logged_in'])){
 	$privilege_admin = $_SESSION['privilege'];
 	if($privilege_admin == 'ADMINISTRADOR'){
-		header("location:admin_panel");
+		header("location:panel_admin");
 	}elseif($privilege_admin =='DOCENTE'){
-		header("location:doctor_panel.html");
+		header("location:panel_doctor");
 	}elseif($privilege_admin == 'ALUMNO'){
 		header("location:alumno_panel.html");
 	}elseif($privilege_admin == 'REPCIONISTA'){
-		header("location:reception_panel.html");
+		header("location:panel_reception");
 	}
 }
 ?>

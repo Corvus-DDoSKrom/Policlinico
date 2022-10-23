@@ -21,8 +21,8 @@ RewriteRule ^register_user$ register_user.php
 RewriteRule ^specialty$ specialty.php
 RewriteRule ^edit_specialty$ edit_specialty.php
 RewriteRule ^register_specialty$ register_specialty.php
-RewriteRule ^reception_panel$ reception_panel.php
-RewriteRule ^admin_panel$ admin_panel.php
-RewriteRule ^doctor_panel$ doctor_panel.php
+RewriteRule ^panel_reception$ panel_reception.php
+RewriteRule ^panel_admin$ panel_admin.php
+RewriteRule ^panel_doctor$ panel_doctor.php
 RewriteRule ^error-403$ errors/403.html
 RewriteRule ^error-404$ errors/404.html

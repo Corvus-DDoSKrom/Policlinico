@@ -27,7 +27,7 @@ $view = mysqli_fetch_array($result);
 </head>
 <body>
     <div class="nav-bar">
-        <a class="logo" href="admin_panel"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
+        <a class="logo" href="panel_admin"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
             <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar SesiÃ³n</a> <!--este apartado esta para cerrar la sesion de la cuenta ingresada -->
         </nav>
@@ -35,7 +35,7 @@ $view = mysqli_fetch_array($result);
     <div class="all-1">
         <div class="menu">
             <nav class="menuvertical-1">
-                <a href="admin_panel"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
+                <a href="panel_admin"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
                 <!--este apartado esta para abrir los usuarios registrados -->
                 <a href="register_doctor"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
                 <!--este apartado esta para abrir los profesionales encargados -->

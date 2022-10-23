@@ -15,12 +15,12 @@ if(isset($_POST["buttonlogin"])){
         if($row && $view["privilege"]){
             $privilege = $view["privilege"]; /* esta apartado registra si el usuario es administrador*/
             if($privilege==1){
-                header("location:admin_panel");
+                header("location:panel_admin");
                 $_SESSION['user_logged_in'] = TRUE;
                 $_SESSION['privilege'] = 'ADMINISTRADOR';
             }
             elseif($privilege==2){ /*este apartado registra si el usuario es docente*/
-                header("location:doctor_panel");
+                header("location:panel_doctor");
                 $_SESSION['user_logged_in'] = TRUE;
                 $_SESSION['privilege'] = 'DOCTOR';
             }
@@ -29,7 +29,7 @@ if(isset($_POST["buttonlogin"])){
                 $_SESSION['user_logged_in'] = TRUE;
                 $_SESSION['privilege'] = 'ALUMNO';
             }elseif($privilege==4){ /*este apartado registra si el usuario es recepcionista*/
-                header("location:reception_panel");
+                header("location:panel_reception");
                 $_SESSION['user_logged_in'] = TRUE;
                 $_SESSION['privilege'] = 'RECEPCIONISTA';
             }

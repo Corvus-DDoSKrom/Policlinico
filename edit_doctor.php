@@ -30,7 +30,7 @@ $view = mysqli_fetch_array($result);
 
     <!-- MENU HORIZONTAL -->
     <div class="nav-bar">
-        <a class="logo" href="admin_panel"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
+        <a class="logo" href="panel_admin"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
             <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a>
         </nav>
@@ -40,7 +40,7 @@ $view = mysqli_fetch_array($result);
     <div class="all-1">
         <div class="menu">
             <nav class="menuvertical-1">
-                <a href="admin_panel"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
+                <a href="panel_admin"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
                 <a href="doctor"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
                 <a href="student"><i class="fa-solid fa-graduation-cap"></i> Alumnos</a>
                 <a href="register_specialty"><i class="fa-solid fa-stethoscope"></i> Especialidades</a>

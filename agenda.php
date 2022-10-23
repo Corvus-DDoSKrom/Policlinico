@@ -50,7 +50,7 @@ mysqli_close($conn);
 </head>
 <body>
     <div class="nav-bar">
-        <a class="logo" href="admin_panel"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
+        <a class="logo" href="panel_reception"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
             <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a> <!--este apartado esta para cerrar la sesion de la cuenta ingresada -->
         </nav>
@@ -58,7 +58,7 @@ mysqli_close($conn);
     <div class="all-1">
         <div class="menu">
             <nav class="menuvertical-1">
-                <a href="reception_panel"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
+                <a href="panel_reception"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
                 <a href="agenda"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
                 <a href="register_patient"><i class="fa-solid fa-person-half-dress"></i> Registrar Paciente</a>
                 <a href="patient"><i class="fa-solid fa-person-half-dress"></i> Paciente</a>
