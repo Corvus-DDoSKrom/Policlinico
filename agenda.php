@@ -1,4 +1,3 @@
-<!-- hOLA-->
 <?php
 session_start();
 require 'config/connection.php';
@@ -218,7 +217,7 @@ mysqli_close($conn);
                         </div>
                     </div>
             
-                    <!-- MODAL al agregar nuevo evento / consultorio -->
+                    <!-- MODAL al agregar - modificar - eliminar nuevo evento / consultorio -->
                     <script>
                         var NuevoEvento;
 
