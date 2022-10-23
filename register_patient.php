@@ -43,56 +43,57 @@ if($privilege_admin !='RECEPCIONISTA'){
         </div>
         <div class="form-5">
             <div class="form-2">
-                <h1>REGISTRAR PACIENTE</h1>
+                <h1>REGISTRAR PACIENTE</h1> <!--INICIA PARA REGUISTAR AL PACIENTE-->
                 <form method="post" action="register_patient">
                     <fieldset class="form-4">
                         <div class="form-left">
                             <div>
-                                <label for="nombre">NOMBRE</label>
+                                <label for="nombre">NOMBRE</label> <!--NOMBRE DEL PACIENTE-->
                                 <br>
                                 <input class="controls-2" type="text" name="name_patient" id="nombre" required>
-                            </div>
+                            </div> <!--FIN DE NOMBRE PACIENTE-->
                             <div>
-                                <label for="apellido">APELLIDO</label>
+                                <label for="apellido">APELLIDO</label> <!--APELLIDO DEL PACIENTE-->
                                 <br>
                                 <input class="controls-2" type="text" name="surname_patient" id="apellido">
-                            </div>
+                            </div> <!--FIN APELLIDO DELM PACIENTE-->
                             <div>
-                                <label for="cedula">CEDULA</label>
+                                <label for="cedula">CEDULA</label> <!--CEDULA DEL PACIENTE-->
                                 <br>
                                 <input class="controls-2" type="number" name="ci_patient" id="cedula">
-                            </div>
+                            </div> <!--FIN DE CEDULA PACIENTE-->
                             <div>
-                                <label for="telefono">TELEFONO</label>
+                                <label for="telefono">TELEFONO</label> <!--TELEFONO DEL PACIENTE-->
                                 <br>
                                 <input class="controls-2" type="text" name="phone_patient" id="telefono">
-                            </div>
+                            </div> <!--FIN TELEFONO DEL PACIENTE-->
                             <div>
-                                <label for="sexo">SEXO</label>
+                                <label for="sexo">SEXO</label> <!--RADIO DEL SEXO DEL PACIENTE-->
                                 <br>
                                 <label><input type=radio name="sex" value="masculido" checked> Masculino</label>
                                 <label><input type=radio name="sex" value="femenino"> Femenino</label>
-                            </div>
-                        </div>
+                            </div> <!--FIN SEXO DEL PACIENTE-->
+                        </div> 
                         <div class="form-right">
                             <div>
-                                <label for="fechanacimiento">FECHA DE NACIMIENTO</label>
+                                <label for="fechanacimiento">FECHA DE NACIMIENTO</label> <!--DATA DEL PACIENTE-->
                                 <br>
                                 <input class="controls-2" type="date" name="date_of_birth" id="fechanacimiento">
-                            </div>
+                            </div> <!--FIN DEL DATE DEL PACIENTE-->
                             <div>
-                                <label for="nacionalidad">NACIONALIDAD</label>
+                                <label for="nacionalidad">NACIONALIDAD</label> <!--PAIS DEL PACIENTE-->
                                 <br>
                                 <input class="controls-2" type="text" name="nationality" id="nacionalidad">
-                            </div>
+                            </div> <!--FIN DE NACIONALIDAD DEL PACIENTE-->
                             <div>
-                                <label for="residencia">CIUDAD DE RESIDENCIA</label>
+                                <label for="residencia">CIUDAD DE RESIDENCIA</label> <!--DONDE VIVE EL PACIENTE-->
                                 <br>
                                 <input class="controls-2" type="text" name="residence" id="residencia">
                             </div>
                             <div>
-                                <label for="estadocivil">ESTADO CIVIL</label>
+                                <label for="estadocivil">ESTADO CIVIL</label> <!--SI EL PACIENTE ESTA CASADO O SOLTERO O DIVORCIADO-->
                                 <br>
+                                <!--BOTON DE SECCIONAR EL ESTADO DEL PACIENTE-->
                                 <select class="controls-2" name="marital_status" id="estadocivil">
                                     <option value="soltero">Soltero/a</option>
                                     <option value="divorciado">Divorciado/a</option>
@@ -101,15 +102,17 @@ if($privilege_admin !='RECEPCIONISTA'){
                                 </select>
                             </div>
                             <div>
-                                <label for="edad">EDAD</label>
+                                <label for="edad">EDAD</label> <!--LA EDAD DEL PACIENTE-->
                                 <br>
                                 <input class="controls-2" type="number" name="age" id="edad">
                             </div>
                         </div>
                     </fieldset>
-                    <br>
+                    <br> <!--BOTON DE GUARDAR Y CANCELAR-->
                     <button class="myButton" type="submit">GUARDAR</button>
                     <button class="myButton" type="reset">CANCELAR</button>
+
+                    <!--FIN DE REGISTRO PACIENTE-->
                 </form>
             </div>
         </div>
