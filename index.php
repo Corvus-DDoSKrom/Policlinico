@@ -26,7 +26,7 @@ if (isset($_SESSION['user_logged_in'])){
 	<style>
         @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap');
     </style>
-	<title>Iniciar Sesión</title>
+	<title>INICIAR SECION</title>
 </head>
 <body>
 	<!--Contenido del login-->
@@ -34,7 +34,7 @@ if (isset($_SESSION['user_logged_in'])){
 		<div class="icono">
 			<i class="fa-solid fa-circle-user"></i>
 		</div><!--Fin del icono del login-->
-		<h2>Bienvenido</h2><!--El titulo-->
+		<h2>BIENVENIDO</h2><!--El titulo-->
 		<form method = "post" action = "authenticate.php">
 			<input class="controls" type="text" style="text-transform:uppercase;" name="username" placeholder="Usuario"><!-- Campo de Usuario-->
 			<input class="controls" type="password" name="passwd" id="passwd" placeholder="Contraseña"><!--Campo de Contrase;a-->

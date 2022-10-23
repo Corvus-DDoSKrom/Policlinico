@@ -43,7 +43,7 @@ if($privilege_admin !='RECEPCIONISTA'){
         </div>
         <div class="form-5">
             <div class="form-2">
-                <h1>REGISTRAR USUARIO</h1>
+                <h1>REGISTRAR PACIENTE</h1>
                 <form method="post" action="register_patient">
                     <fieldset class="form-4">
                         <div class="form-left">

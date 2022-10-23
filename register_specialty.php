@@ -20,7 +20,7 @@ if($privilege_admin !='ADMINISTRADOR'){
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap');
     </style>
-    <Title>Especializaciones</Title>
+    <Title>ESPECIALISACIONES</Title>
 </head>
 <body>
 
