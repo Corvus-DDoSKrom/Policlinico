@@ -6,6 +6,10 @@ $privilege_admin = $_SESSION['privilege'];
 if($privilege_admin !='DOCTOR'){
     header("location:error-403");
 }
+$db_consulting="SELECT*FROM eventos";
+$result = mysqli_query($conn, $db_consulting);
+$view = mysqli_fetch_array($result);
+mysqli_close($conn);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -38,6 +42,27 @@ if($privilege_admin !='DOCTOR'){
                 <a href="about.php"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
                 <!--este apartado esta para abrir el menu de ayuda -->
             </nav>
+        </div>
+        <div class="form-5">
+            <div class="form-2">
+                <div class="div-users">
+                    <div class="div-user">
+                        <h1>Pacientes</h1>
+                    </div>
+                </div>
+                <fieldset class="form-4">
+                    <?php
+                        foreach($result){
+                            if()
+                    ?>
+                    <a href="#"><i class="myButton fa-solid fa-heart-pulse"><p>Hola</p></i></a>
+                    <?php 
+                    }  /*Fin del recorrido de datos*/
+                    mysqli_free_result($result);
+                    ?>
+                </fieldset>
+                </br>
+            </div>
         </div>
     </div>
 </body>

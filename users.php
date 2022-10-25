@@ -6,9 +6,9 @@ $privilege_admin = $_SESSION['privilege'];
 if($privilege_admin !='ADMINISTRADOR'){
     header("location:error-403");
 }
-$db_consulting="SELECT*FROM login";
-$result = mysqli_query($conn, $db_consulting);
-$view = mysqli_fetch_array($result);
+$db_consulting="SELECT*FROM login INNER JOIN privilege ON login.id_privilege = privilege.id_privilege";
+$result=mysqli_query($conn, $db_consulting);
+$view=mysqli_fetch_array($result);
 mysqli_close($conn);
 ?>
 <!DOCTYPE html>
@@ -79,21 +79,7 @@ mysqli_close($conn);
                             <tr>
                                 <td><?php echo $row['id_user']; ?></td>
                                 <td style="text-transform:uppercase;"><?php echo $row['username']; ?></td>
-                                <td><?php $privilege =$row['privilege'];
-                                     /**IF ELSE PASA SABER QUE PERSONA INGRESARA EN EL SISTEMA */
-                                        if($privilege==1){
-                                            echo "ADMINISTRADOR";   /**SECELECCIONANDO ADM IMGRESA ADM */
-                                        }
-                                        elseif($privilege==2){
-                                            echo "DOCTOR";       /**SECIONANDO DOCENTE INGRESA DOCENTE */
-                                        }
-                                        elseif($privilege==3){
-                                            echo "ALUMNO";         /**SELECCIONANDO ALUMNO SALTA LA PANTALLA ALUMNO */
-                                        }elseif($privilege==4){
-                                            echo "RECEPCIONISTA";         /**SELECCIONANDO ALUMNO SALTA LA PANTALLA ALUMNO */
-                                        }
-                                    ?>
-                                </td>
+                                <td><?php echo $row['privilege']; ?></td>
                                 <td>
                                     <a href="edit_user?id_user=<?php echo $row['id_user'];?>"><i class="myButton-edit fa-solid fa-pen-to-square"></i></a><!--este apartado sirve para  editar USERS -->
                                     <a href="delete_user.php?id_user=<?php echo $row['id_user'];?>" onclick="return confirm('Estás seguro que deseas eliminar el registro?');"><i class="myButton-del fa-solid fa-trash"></i></a><!--Este apartado sirve para  eliminar USERS -->

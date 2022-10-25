@@ -82,7 +82,6 @@ mysqli_close($conn);
                             <?php 
                             }    
                             mysqli_free_result($result); 
-                            
                             ?>
                         </tbody>
                     </table>

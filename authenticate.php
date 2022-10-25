@@ -12,8 +12,8 @@ if(isset($_POST["buttonlogin"])){
     $view = mysqli_fetch_array($result);
     if($row && password_verify($passwd,$view['passwd'])){ /*Verifica si el usuario y contraseña son correctos*/
         /* Inicio de verificacion de privilegios */
-        if($row && $view["privilege"]){
-            $privilege = $view["privilege"]; /* esta apartado registra si el usuario es administrador*/
+        if($row && $view["id_privilege"]){
+            $privilege = $view["id_privilege"]; /* esta apartado registra si el usuario es administrador*/
             if($privilege==1){
                 header("location:panel_admin");
                 $_SESSION['user_logged_in'] = TRUE;
