@@ -77,3 +77,5 @@ DESARROLADORES
 * Alcides Ruben Niz Sosa
 * Rubén Dario Barrios Centurión
 * María Gisselle González González
+* Ever Adrian Meza Encina
+* Cecilia Anahi Ibarrola Ferreira
