@@ -3,12 +3,16 @@ session_start();
 require 'config/connection.php';
 require 'includes/auth_validate.php';
 $privilege_admin = $_SESSION['privilege'];
+$id_user2 = $_SESSION['id'];
 if($privilege_admin !='DOCTOR'){
     header("location:error-403");
 }
-$db_consulting="SELECT*FROM eventos";
+$db_consulting="SELECT*FROM eventos INNER JOIN patient ON eventos.id_patient = patient.id_patient INNER JOIN specialty ON eventos.id_specialty = specialty.id_specialty WHERE id_doctor='$id_user2'";
 $result = mysqli_query($conn, $db_consulting);
-$view = mysqli_fetch_array($result);
+$view=mysqli_fetch_array($result);
+$db_consulting_2="SELECT*FROM doctor";
+$result_2=mysqli_query($conn, $db_consulting_2);
+$view_2=mysqli_fetch_array($result_2);
 mysqli_close($conn);
 ?>
 <!DOCTYPE html>
@@ -51,15 +55,26 @@ mysqli_close($conn);
                     </div>
                 </div>
                 <fieldset class="form-4">
-                    <?php
-                        foreach($result){
-                            if()
-                    ?>
-                    <a href="#"><i class="myButton fa-solid fa-heart-pulse"><p>Hola</p></i></a>
-                    <?php 
-                    }  /*Fin del recorrido de datos*/
-                    mysqli_free_result($result);
-                    ?>
+                    <table class="blueTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">PACIENTES</th><!--Este apartado sirve para mostrar el id del USER -->
+                            </tr>
+                        </thead>
+                        <tbody id="datos">
+                            <?php
+                            if($id_user2 == $view['id_doctor']){
+                                foreach($result as $row){
+                            ?>
+                            <tr>
+                                <td><a href="#" class="myButton_patient"><?php echo $row['name_patient']; echo" "; echo $row['surname_patient']; echo" "; echo $row['title'];?></a></td>
+                            </tr>
+                            <?php
+                                }
+                            }
+                            ?>
+                        </tbody>
+                    </table>
                 </fieldset>
                 </br>
             </div>

@@ -6,6 +6,8 @@ $privilege_admin = $_SESSION['privilege'];
 if($privilege_admin !='ADMINISTRADOR'){
     header("location:error-403");
 }
+$db_consulting="SELECT*FROM login INNER JOIN privilege ON login.id_privilege = privilege.id_privilege WHERE privilege='DOCTOR'";
+$result=mysqli_query($conn, $db_consulting);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -79,6 +81,21 @@ if($privilege_admin !='ADMINISTRADOR'){
                                 </br>
                                 <input class="controls-2" type="text" name="direction_doctor" id="doctor"><!--este apartado esta para registrar la direccion del doctor -->
                             </div>
+                            <div>
+                                <label for="user">USUARIO</label>
+                                </br>
+                                <select class="controls-2" style="text-transform:uppercase;" name="id_user">USUARIO
+                                <?php
+                                while ($row = mysqli_fetch_array($result)){
+                                    $id_user = $row['id_user'];
+                                    $username = $row['username'];
+                                ?>
+                                    <option value="<?php echo $id_user; ?>"><?php echo("$username"); ?></option>
+                                <?php
+                                }
+                                ?>
+                                </select>
+                            </div>
                         </div>    
                     </fieldset>
                     <br>
@@ -100,16 +117,17 @@ if($privilege_admin !='ADMINISTRADOR'){
         $email_doctor = $_POST["email_doctor"];
         $phone_doctor = $_POST["phone_doctor"];
         $direction_doctor = $_POST["direction_doctor"];
+        $user = $_POST["id_user"];
     /*fin de la validacion de datos*/
-        $db_consulting="SELECT*FROM doctor where name_doctor='$name_doctor'"; 
-        $result = mysqli_query($conn, $db_consulting);
-        $row = mysqli_num_rows($result);
-        $view = mysqli_fetch_array($conn, $db_consulting);
+        $db_consulting_2="SELECT*FROM doctor where name_doctor='$name_doctor'"; 
+        $result_2 = mysqli_query($conn, $db_consulting_2);
+        $row = mysqli_num_rows($result_2);
+        $view = mysqli_fetch_array($conn, $db_consulting_2);
         if($row==0){ /* Este codigo sirve para verificar si todos los datos son correctos*/
-            $sql = "INSERT INTO doctor (name_doctor, surname_doctor, email_doctor, phone_doctor, direction_doctor) VALUES ('$name_doctor', '$surname_doctor', '$email_doctor', '$phone_doctor', '$direction_doctor')";
-            $result = mysqli_query($conn, $sql);
-            if($result){/*si todo esta correcto procede a guardar en la base de datos*/
-                    echo "<script> alert('Doctor/a $name_doctor $surname_doctor registrado');window.location= 'register_doctor' </script>";
+            $sql = "INSERT INTO doctor (id_user, name_doctor, surname_doctor, email_doctor, phone_doctor, direction_doctor) VALUES ('$user', '$name_doctor', '$surname_doctor', '$email_doctor', '$phone_doctor', '$direction_doctor')";
+            $result_2 = mysqli_query($conn, $sql);
+            if($result_2){/*si todo esta correcto procede a guardar en la base de datos*/
+                    echo "<script> alert('Doctor/a $name_doctor $surname_doctor registrado');window.location= 'doctor' </script>";
             }else {
                     echo "Error: " .$sql."<br>".mysql_error($conn); /*si no, se imprime en pantalla el mensaje de error*/
             }

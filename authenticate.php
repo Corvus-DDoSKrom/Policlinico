@@ -2,14 +2,18 @@
 require_once './config/connection.php';
 session_start(); 
 /*Esta parte recibe los datos del index*/
-$username = $_POST["username"];
-$passwd = $_POST["passwd"];
+$username = $_GET['username'];
+$passwd = $_GET['passwd'];
 /*Fin del dato de recepcion de dato*/
-if(isset($_POST["buttonlogin"])){
-    $db_consulting="SELECT*FROM login where username='$username'"; /*este apartado verifica si el usuario y contraseña existe*/
+if(isset($_GET["buttonlogin"])){
+    $db_consulting="SELECT*FROM login WHERE username='$username'"; /*este apartado verifica si el usuario y contraseña existe*/
     $result = mysqli_query($conn, $db_consulting);
     $row = mysqli_num_rows($result);
     $view = mysqli_fetch_array($result);
+    $db_doctor="SELECT*FROM doctor INNER JOIN login ON doctor.id_user = login.id_user WHERE username='$username'";
+    $result_doctor=mysqli_query($conn, $db_doctor);
+    $row_doctor = mysqli_num_rows($result_doctor);
+    $view_doctor=mysqli_fetch_array($result_doctor);
     if($row && password_verify($passwd,$view['passwd'])){ /*Verifica si el usuario y contraseña son correctos*/
         /* Inicio de verificacion de privilegios */
         if($row && $view["id_privilege"]){
@@ -20,9 +24,12 @@ if(isset($_POST["buttonlogin"])){
                 $_SESSION['privilege'] = 'ADMINISTRADOR';
             }
             elseif($privilege==2){ /*este apartado registra si el usuario es docente*/
-                header("location:panel_doctor");
-                $_SESSION['user_logged_in'] = TRUE;
-                $_SESSION['privilege'] = 'DOCTOR';
+                if($row_doctor && $view_doctor['id_user']){
+                    header("location:panel_doctor");
+                    $_SESSION['user_logged_in'] = TRUE;
+                    $_SESSION['privilege'] = 'DOCTOR';
+                    $_SESSION['id'] = $view_doctor['id_doctor'];
+                }
             }
             elseif($privilege==3){ /*este apartado registra si el usuario es alumno*/
                 header("location:alumno_panel");

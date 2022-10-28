@@ -89,13 +89,12 @@ if($privilege_admin !='ADMINISTRADOR'){
             $result = mysqli_query($conn, $db_consulting);
             $row = mysqli_num_rows($result);
             $view = mysqli_fetch_array($conn, $db_consulting);
-            
             //REGISTRAR NUEVO USUARIO
             if($row==0){
                 //Encriptación de la contraseña en BD
                 $password_encrypted = password_hash($passwd, PASSWORD_BCRYPT);
                 //Insertar datos del nuevo usuario a la BD
-                $sql = "INSERT INTO login (username, passwd, privilege) VALUES ('$username', '$password_encrypted', '$privilege')";
+                $sql = "INSERT INTO login (username, passwd, id_privilege) VALUES ('$username', '$password_encrypted', '$privilege')";
                 $result = mysqli_query($conn, $sql);
                 if($result){
                     //Usuario existente

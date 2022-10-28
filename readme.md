@@ -79,3 +79,4 @@ DESARROLADORES
 * María Gisselle González González
 * Ever Adrian Meza Encina
 * Cecilia Anahi Ibarrola Ferreira
+* Erick Kohler Andrade

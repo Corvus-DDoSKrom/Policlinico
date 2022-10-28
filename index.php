@@ -13,6 +13,10 @@ if (isset($_SESSION['user_logged_in'])){
 		header("location:panel_reception");
 	}
 }
+$db_consulting="SELECT*FROM login";
+$result=mysqli_query($conn, $db_consulting);
+$view=mysqli_fetch_array($result);
+mysqli_close($conn);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -35,11 +39,11 @@ if (isset($_SESSION['user_logged_in'])){
 			<i class="fa-solid fa-circle-user"></i>
 		</div><!--Fin del icono del login-->
 		<h2>BIENVENIDO</h2><!--El titulo-->
-		<form method = "post" action = "authenticate.php">
+		<form method = "GET" action = "authenticate.php">
 			<input class="controls" type="text" style="text-transform:uppercase;" name="username" placeholder="Usuario"><!-- Campo de Usuario-->
 			<input class="controls" type="password" name="passwd" id="passwd" placeholder="Contraseña"><!--Campo de Contrase;a-->
 			<input class="check" type="checkbox" onclick="view_password()" > Mostrar contraseña
-			<button class="myButton" type="submit" name="buttonlogin">Ingresar</button><!--Boton de Ingresar-->
+			<input href="authenticate.php" class="myButton" type="submit" name="buttonlogin" /><!--Boton de Ingresar-->
 		</form>
 	</section>
 	<!--Fin del contenido del Login-->
