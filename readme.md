@@ -80,3 +80,6 @@ DESARROLADORES
 * Ever Adrian Meza Encina
 * Cecilia Anahi Ibarrola Ferreira
 * Erick Kohler Andrade
+* Enrique Rafael Basualdo Alvarenga
+* Edison Javier Diaz Cuevas
+* Fabio Ariel Romero Benitez
