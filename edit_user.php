@@ -7,7 +7,7 @@ if($privilege_admin !='ADMINISTRADOR'){
     header("location:error-403");
 }
 $id_user = $_GET['id_user'];
-$db_consulting="SELECT*FROM login Where id_user = '$id_user'";
+$db_consulting="SELECT*FROM login WHERE id_user = '$id_user'";
 $result = mysqli_query($conn, $db_consulting);
 $view = mysqli_fetch_array($result);
 ?>

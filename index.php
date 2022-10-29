@@ -5,7 +5,7 @@ if (isset($_SESSION['user_logged_in'])){
 	$privilege_admin = $_SESSION['privilege'];
 	if($privilege_admin == 'ADMINISTRADOR'){
 		header("location:panel_admin");
-	}elseif($privilege_admin =='DOCENTE'){
+	}elseif($privilege_admin =='DOCTOR'){
 		header("location:panel_doctor");
 	}elseif($privilege_admin == 'ALUMNO'){
 		header("location:alumno_panel.html");
