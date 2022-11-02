@@ -57,7 +57,7 @@ $view = mysqli_fetch_array($result);
         <div class="form-5">
             <div class="form-2">
                 <h1>MODIFICAR USUARIO</h1>
-                <form method="post" action="edit_user.php">
+                <form method="post" action="edit_user">
                     <fieldset class="form-4">
                         <div class="form-left">
                             <div>
@@ -133,7 +133,7 @@ $view = mysqli_fetch_array($result);
         /* Este apartado guarda la modificacion realizada*/
         if(isset($_POST["buttonguardar"])){
             $password_encrypted = password_hash($passwd, PASSWORD_BCRYPT);
-            $db_updating = "UPDATE login SET username='$username', passwd='$password_encrypted', privilege='$privilege' WHERE id_user=$id_username";
+            $db_updating = "UPDATE login SET username='$username', passwd='$password_encrypted', id_privilege='$privilege' WHERE id_user=$id_username";
             $result = mysqli_query($conn, $db_updating);
             if($result){
                 echo "<script> alert('Usuario modificado: $username');window.location= 'user' </script>";
