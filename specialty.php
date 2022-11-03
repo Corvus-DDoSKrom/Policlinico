@@ -31,21 +31,17 @@ mysqli_close($conn);
     <div class="nav-bar">
         <a class="logo" href="panel_panel"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
-            <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a>
-        </nav>
-    </div>
-    <div class="all-1">
-        <!-- MENU VERTICAL -->
-        <div class="menu">
-            <nav class="menuvertical-1">
+              <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a>
                 <a href="panel_admin"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
                 <a href="doctor"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
                 <a href="student"><i class="fa-solid fa-graduation-cap"></i> Alumnos</a>
                 <a href="specialty"><i class="fa-solid fa-stethoscope"></i> Especialidad</a>
                 <a href="user"><i class="fa-solid fa-user"></i> Usuario</a> 
                 <a href="about.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
-            </nav>
-        </div>
+        </nav>
+    </div>
+     <div class="all-1">
+    
         
         <!-- ESPECIALIDAD -->
         <div class="form-5">

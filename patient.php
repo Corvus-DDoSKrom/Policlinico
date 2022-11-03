@@ -30,19 +30,16 @@ mysqli_close($conn);
     <div class="nav-bar">
         <a class="logo" href="panel_reception"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
-            <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a>
-        </nav>
-    </div>
-    <div class="all-1">
-        <div class="menu">
-            <nav class="menuvertical-1">
-                <a href="panel_reception"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
+                <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a>
+                 <a href="panel_reception"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
                 <a href="agenda"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
                 <a href="register_patient"><i class="fa-solid fa-person-half-dress"></i> Registrar Paciente</a>
                 <a href="patient"><i class="fa-solid fa-person-half-dress"></i> Paciente</a>
                 <a href="about.php"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
-            </nav>
-        </div>
+        </nav>
+    </div>
+    <div class="all-1">
+
 
     <!-- Seccion pacientes -->
         <div class="form-5">

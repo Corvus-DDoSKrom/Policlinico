@@ -32,24 +32,17 @@ $view = mysqli_fetch_array($result);
     <div class="nav-bar">
         <a class="logo" href="panel_admin"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
-            <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a>
-        </nav>
-    </div>
-    
-    <!-- MENU HORIZONTAL -->
-    <div class="all-1">
-        <div class="menu">
-            <nav class="menuvertical-1">
+                <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a>
                 <a href="panel_admin"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
                 <a href="doctor"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
                 <a href="student"><i class="fa-solid fa-graduation-cap"></i> Alumnos</a>
                 <a href="register_specialty"><i class="fa-solid fa-stethoscope"></i> Especialidades</a>
                 <a href="user"><i class="fa-solid fa-user"></i> Usuario</a> 
-                <a href="about.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
-            </nav>
-        </div>
-
-        <!-- Empieza area: EDIT DOCTOR -->
+                <a href="about.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a>      
+        </nav>
+    </div>
+    <div class="all-1">
+         <!-- Empieza area: EDIT DOCTOR -->
         <div class="form-5">
             <div class="form-2">
                 <h1>EDITAR DOCTOR/A</h1>

@@ -33,20 +33,15 @@ mysqli_close($conn);
     <div class="nav-bar">
         <a class="logo" href="panel_doctor"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
+            <a href="panel_doctor"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
+            <a href="agenda_doctor"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
+            <a href="register_patient"><i class="fa-solid fa-person-half-dress"></i> Registrar Paciente</a>
+            <a href="query"><i class="fa-solid fa-person-half-dress"></i> Consulta</a>
+            <a href="about.php"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
             <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a> <!--este apartado esta para cerrar la sesion de la cuenta ingresada -->
         </nav>
     </div>
     <div class="all-1">
-        <div class="menu">
-            <nav class="menuvertical-1">
-                <a href="panel_doctor"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
-                <a href="agenda_doctor"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
-                <a href="register_patient"><i class="fa-solid fa-person-half-dress"></i> Registrar Paciente</a>
-                <a href="query"><i class="fa-solid fa-person-half-dress"></i> Consulta</a>
-                <a href="about.php"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
-                <!--este apartado esta para abrir el menu de ayuda -->
-            </nav>
-        </div>
         <div class="form-5">
             <div class="form-2">
                 <div class="div-users">

@@ -26,21 +26,16 @@ if($privilege_admin !='RECEPCIONISTA'){
     <div class="nav-bar">
         <a class="logo" href="panel_reception"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
-            <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a> <!--este apartado esta para cerrar la sesion de la cuenta ingresada -->
-        </nav>
-    </div>
-    <div class="all-1">
-        <!-- MENU VERTICAL -->
-        <div class="menu">
-            <nav class="menuvertical-1">
+                 <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a> <!--este apartado esta para cerrar la sesion de la cuenta ingresada -->
                 <a href="panel_reception"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
                 <a href="agenda"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
                 <a href="register_patient"><i class="fa-solid fa-person-half-dress"></i> Registrar Paciente</a>
                 <a href="patient"><i class="fa-solid fa-person-half-dress"></i> Paciente</a>
                 <a href="about.php"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
                 <!--este apartado esta para abrir el menu de ayuda -->
-            </nav>
-        </div>
+        </nav>
+    </div>
+    <div class="all-1">
         <div class="form-5">
             <div class="form-2">
                 <h1>REGISTRAR PACIENTE</h1> <!--INICIA PARA REGUISTAR AL PACIENTE-->

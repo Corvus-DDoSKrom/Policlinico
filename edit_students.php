@@ -44,6 +44,7 @@ $view = mysqli_fetch_array($result);
                 <a href="about.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
             </nav>
         </div>
+        <div class="all-1">
         <!-- Ediar alumno -->
         <div class="form-5">
             <div class="form-2">

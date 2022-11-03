@@ -53,22 +53,18 @@ mysqli_close($conn);
     <div class="nav-bar">
         <a class="logo" href="panel_reception"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
+            <a href="panel_reception"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
+            <a href="agenda"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
+            <a href="register_patient"><i class="fa-solid fa-person-half-dress"></i> Registrar Paciente</a>
+            <a href="patient"><i class="fa-solid fa-person-half-dress"></i> Paciente</a>
+            <a href="about.php"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
             <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a>
         </nav>
     </div>
     <div class="all-1">
-        <div class="menu">
-            <nav class="menuvertical-1">
-                <a href="panel_reception"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
-                <a href="agenda"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
-                <a href="register_patient"><i class="fa-solid fa-person-half-dress"></i> Registrar Paciente</a>
-                <a href="patient"><i class="fa-solid fa-person-half-dress"></i> Paciente</a>
-                <a href="about.php"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
-            </nav>
-        </div>
-        <div class="form-8">
-            <div class="form-7">
-                <fieldset class="form-6">
+        <div class="form-5">
+            <div class="form-2">
+                <fieldset class="form-4">
                     <div class="col-12">
                         <div id="CalendarioWeb">
                         </div>

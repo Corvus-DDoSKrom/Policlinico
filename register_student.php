@@ -26,15 +26,8 @@ if($privilege_admin !='ADMINISTRADOR'){
     <div class="nav-bar">
         <a class="logo" href="panel_admin"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
-            <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a> <!--este apartado esta para cerrar la sesion de la cuenta ingresada -->
-        </nav>
-    </div>
-    <!-- Fin del menu horizontal-->
-    <!--Comienzo del menu vertical-->
-    <div class="all-1">
-        <div class="menu">
-            <nav class="menuvertical-1">
-                <a href="panel_admin"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
+               <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a> <!--este apartado esta para cerrar la sesion de la cuenta ingresada -->
+               <a href="panel_admin"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
                 <!--este apartado esta para abrir los usuarios registrados -->
                 <a href="doctor"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
                 <!--este apartado esta para abrir los profesionales encargados -->
@@ -46,8 +39,10 @@ if($privilege_admin !='ADMINISTRADOR'){
                 <!--este apartado esta para abrir los usuarios registrados -->
                 <a href="about.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
                 <!--este apartado esta para abrir el menu de ayuda -->
-            </nav>
-        </div>
+        </nav>
+    </div> 
+    <div class="all-1">
+    
         <!--Fin del menú vertical-->
         <!--Iinicio del panel de registro de alumnos -->
         <div class="form-5">
