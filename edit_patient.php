@@ -30,12 +30,12 @@ $view = mysqli_fetch_array($result);
     <div class="nav-bar">
         <a class="logo" href="panel_reception"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
-                <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a> <!--este apartado esta para cerrar la sesion de la cuenta ingresada -->
                 <a href="panel_reception"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
                 <a href="agenda"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
                 <a href="register_patient"><i class="fa-solid fa-person-half-dress"></i> Registrar Paciente</a>
                 <a href="patient"><i class="fa-solid fa-person-half-dress"></i> Paciente</a>
                 <a href="about.php"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
+                <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a> <!--este apartado esta para cerrar la sesion de la cuenta ingresada -->
                 <!--este apartado esta para abrir el menu de ayuda -->
         </nav>
     </div>

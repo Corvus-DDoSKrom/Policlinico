@@ -49,7 +49,7 @@ if($privilege_admin !='ADMINISTRADOR'){
                     </div>
                 </div>
                 <fieldset>
-                    <
+                    
                 </fielset>
             </div>
         </div>

@@ -1,7 +1,10 @@
 <?php
+    session_start();
+    require 'includes/auth_validate.php';
     header('Content-Type: application/json');
     $pdo=new PDO("mysql:dbname=policlinico;host=localhost","root","");
     $accion= (isset($_GET['accion']))?$_GET['accion']:'leer';
+    $id_user2 = $_SESSION['id_doctor'];
     switch($accion){
         case 'agregar':
             //AGREGAR
@@ -23,7 +26,7 @@
         break;
         default:
             //Seleccionar los eventos del calendario
-            $sentenciaSQL= $pdo->prepare("SELECT*FROM eventos INNER JOIN specialty ON eventos.id_specialty = specialty.id_specialty");
+            $sentenciaSQL= $pdo->prepare("SELECT*FROM eventos INNER JOIN specialty ON eventos.id_specialty = specialty.id_specialty WHERE id_doctor='$id_user2'");
             $sentenciaSQL->execute();
             $resultado= $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
             echo json_encode($resultado);

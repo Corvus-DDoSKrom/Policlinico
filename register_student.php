@@ -26,19 +26,19 @@ if($privilege_admin !='ADMINISTRADOR'){
     <div class="nav-bar">
         <a class="logo" href="panel_admin"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
-               <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a> <!--este apartado esta para cerrar la sesion de la cuenta ingresada -->
                <a href="panel_admin"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
                 <!--este apartado esta para abrir los usuarios registrados -->
                 <a href="doctor"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
                 <!--este apartado esta para abrir los profesionales encargados -->
                 <a href="student"><i class="fa-solid fa-graduation-cap"></i> Alumnos</a>
                 <!--este apartado esta para abrir los alumnos registrados -->
-                <a href="register_specialty"><i class="fa-solid fa-stethoscope"></i> Especialidades</a>
+                <a href="specialty"><i class="fa-solid fa-stethoscope"></i> Especialidades</a>
                 <!--este apartado esta para abrir la lista de las especialidades -->
                 <a href="user"><i class="fa-solid fa-user"></i> Usuario</a> 
                 <!--este apartado esta para abrir los usuarios registrados -->
                 <a href="about.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
                 <!--este apartado esta para abrir el menu de ayuda -->
+                <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a> <!--este apartado esta para cerrar la sesion de la cuenta ingresada -->
         </nav>
     </div> 
     <div class="all-1">

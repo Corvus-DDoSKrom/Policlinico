@@ -28,13 +28,13 @@ if($privilege_admin !='ADMINISTRADOR'){
     <div class="nav-bar">
         <a class="logo" href="panel_admin"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
-               <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a> <!--este apartado esta para cerrar la sesion de la cuenta ingresada -->
                <a href="panel_admin"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
                 <a href="doctor"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
                 <a href="student"><i class="fa-solid fa-graduation-cap"></i> Alumnos</a>
                 <a href="specialty"><i class="fa-solid fa-stethoscope"></i> Especialidad</a>
                 <a href="user"><i class="fa-solid fa-user"></i> Usuario</a> 
                 <a href="about.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
+                <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a> <!--este apartado esta para cerrar la sesion de la cuenta ingresada -->
         </nav>
     </div>
     
@@ -82,7 +82,7 @@ if($privilege_admin !='ADMINISTRADOR'){
                 }        
             }
             else{                                   //Mensaje no se puede crear
-                    echo "<script> alert('No puedes registrar esta especialidad: $title');window.location= 'register_specialty' </script>";
+                    echo "<script> alert('No puedes registrar esta especialidad: $title');window.location= 'specialty' </script>";
             }
             mysqli_close($conn);
         }    
