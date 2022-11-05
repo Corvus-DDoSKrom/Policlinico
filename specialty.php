@@ -43,7 +43,7 @@ mysqli_close($conn);
      <div class="all-1">
         <!-- ESPECIALIDAD -->
         <div class="form-5">
-            <div class="form-2">Z
+            <div class="form-2">
                 <div class="div-users">
                     <div class="div-user">
                         <h1>ESPECIALIDAD</h1>
