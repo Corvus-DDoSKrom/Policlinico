@@ -53,17 +53,13 @@ $view = mysqli_fetch_array($result);
                     <fieldset class="fomr-4">
                         <div class="form-left">
                             <div>
-                                <label for="name-user">ID DE LA ESPECIALIDAD</label> 
-                                </br>
-                                <!--este apartado esta para poner el numero de identidad de la especialidad -->
-                                <input class="controls-2" type="text" style="text-transform:uppercase;" name="id_specialty" id="id_specialty" value="<?php echo $_GET['id_specialty']; ?>" readonly></br>
+                                <input type="hidden" class="controls-2" style="text-transform:uppercase;" name="id_specialty" id="id_specialty" value="<?php echo $_GET['id_specialty']; ?>" readonly></br>
                             </div>
-                            <div>
                             <div>
                                 <label>Nombre de Especialidad</label>
                                 <br>
                                 <!--este apartado esta para poner el nombre de la especialidad -->
-                                <input class="controls-2" type="text" name="specialty" id="specialty" value="<?php echo $view['specialty']; ?>"/>
+                                <input class="controls-2" type="text" name="specialty" id="specialty" value="<?php echo $view['title']; ?>"/>
                             </div>
                         </div> 
                     </fieldset>

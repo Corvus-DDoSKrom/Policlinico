@@ -49,9 +49,7 @@ $view = mysqli_fetch_array($result);
                     <fieldset class="form-4">
                         <div class="form-left">
                             <div>
-                                <label for="name-user">ID DEL ALUMNO</label>
-                                </br>
-                                <input class="controls-2" type="text" style="text-transform:uppercase;" name="id_alumno" id="id_alumno" value="<?php echo $_GET['id_alumno']; ?>" readonly></br>
+                                <input type="hidden" class="controls-2" style="text-transform:uppercase;" name="id_alumno" id="id_alumno" value="<?php echo $_GET['id_alumno']; ?>" readonly></br>
                             </div>
                             <div>
                                 <label for="nombre">NOMBRE:</label>

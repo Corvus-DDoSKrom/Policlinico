@@ -50,33 +50,31 @@ $view = mysqli_fetch_array($result);
                     <fieldset class="form-4">
                         <div class="form-left">
                             <div>
-                                <label for="name-user">ID DEL DOCTOR/A</label>
-                                </br>
-                                <input class="controls-2" type="text" style="text-transform:uppercase;" name="id_doctor" id="id_doctor" value="<?php echo $_GET['id_doctor']; ?>" readonly></br>
+                                <input type="hidden" class="controls-2" style="text-transform:uppercase;" name="id_doctor" id="id_doctor" value="<?php echo $_GET['id_doctor']; ?>" readonly></br>
                             </div>
                             <div>
                                 <label for="nombre">Nombre</label>
                                 <br>
-                                <input class="controls-2" type="text" style="text-transform:uppercase;" name="name_doctor" id="name">
+                                <input class="controls-2" type="text" style="text-transform:uppercase;" name="name_doctor" id="name" value="<?php echo $view['name_doctor']; ?>">
                             </div>
                             <div>
                                 <label for="apellido">Apellido</label>
                                 <br>
-                                <input class="controls-2" type="text" style="text-transform:uppercase;" name="surname_doctor" id="surname">
+                                <input class="controls-2" type="text" style="text-transform:uppercase;" name="surname_doctor" id="surname" value="<?php echo $view['surname_doctor']; ?>">
                             </div>
                             <div>
                                 <label for="email">Email</label>
                                 <br>
-                                <input class="controls-2" type="email" name="email_doctor" id="email">
+                                <input class="controls-2" type="email" name="email_doctor" id="email" value="<?php echo $view['email_doctor']; ?>">
                             </div>
                             <div>
                                 <label for="telefono">Telefono</label>
                                 <br>
-                                <input class="controls-2" type="text" name="phone_doctor" id="phone">
+                                <input class="controls-2" type="text" name="phone_doctor" id="phone" value="<?php echo $view['phone_doctor']; ?>">
                             <div>
                                 <label for="direc">Direccion</label>
                                 </br>
-                                <input class="controls-2" type="text" name="direction_doctor" id="doctor">
+                                <input class="controls-2" type="text" name="direction_doctor" id="doctor" value="<?php echo $view['direction_doctor']; ?>">
                             </div>
                         </div>    
                     </fieldset>

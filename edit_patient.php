@@ -43,9 +43,12 @@ $view = mysqli_fetch_array($result);
         <div class="form-5">
             <div class="form-2">
                 <h1>EDITAR USUARIO</h1>
-                <form method="post" action="register_patient">
+                <form method="post" action="edit_patient">
                     <fieldset class="form-4">
                         <div class="form-left">
+                            <div>
+                                <input type="hidden" name="id_patient" value="<?php echo $view['id_patient']; ?>">
+                            </div>
                             <div>
                                 <label for="nombre">NOMBRE</label>
                                 <br>

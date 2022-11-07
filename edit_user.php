@@ -54,10 +54,7 @@ $view = mysqli_fetch_array($result);
                     <fieldset class="form-4">
                         <div class="form-left">
                             <div>
-                                <label for="name-user">ID DEL USUARIO</label>
-                                </br>
-                                <input class="controls-2" type="text" style="text-transform:uppercase;" name="id_username" id="id_usuario" value="<?php echo $_GET['id_user']; ?>" readonly></br> <!--este apartado esta para registrar el id del usuario -->
-                            </div>
+                                <input type="hidden" class="controls-2" style="text-transform:uppercase;" name="id_username" id="id_usuario" value="<?php echo $_GET['id_user']; ?>" readonly></br> <!--este apartado esta para registrar el id del usuario -->
                             <div>
                                 <label for="name-user">NOMBRE DE USUARIO</label>
                                 </br>
