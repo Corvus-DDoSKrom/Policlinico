@@ -26,7 +26,7 @@
         break;
         default:
             //Seleccionar los eventos del calendario
-            $sentenciaSQL= $pdo->prepare("SELECT*FROM eventos INNER JOIN specialty ON eventos.id_specialty = specialty.id_specialty WHERE id_doctor='$id_user2'");
+            $sentenciaSQL= $pdo->prepare("SELECT*FROM eventos INNER JOIN specialty ON eventos.id_specialty = specialty.id_specialty WHERE id_doctor='$id_user2' AND estado='1'");
             $sentenciaSQL->execute();
             $resultado= $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
             echo json_encode($resultado);

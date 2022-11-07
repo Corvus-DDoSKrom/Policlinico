@@ -20,7 +20,7 @@ mysqli_close($conn);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGENDA</title>
+    <title>PANEL DOCTOR</title>
     <link rel="shortcut icon" href="assets/img/ico.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -53,7 +53,7 @@ mysqli_close($conn);
     <div class="nav-bar">
         <a class="logo" href="panel_reception"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
-            <a href="panel_reception"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
+            <a href="panel_doctor"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
             <a href="agenda"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
             <a href="register_patient"><i class="fa-solid fa-person-half-dress"></i> Registrar Paciente</a>
             <a href="patient"><i class="fa-solid fa-person-half-dress"></i> Paciente</a>
@@ -114,6 +114,7 @@ mysqli_close($conn);
                     <form method="GET" action="consulta.php">
                         <div class="modal fade" id="ModalEventos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-lg" role="document">
+                                <input type="hidden" id="txtID" name="txtID">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                     <h5 class="modal-title" id="tituloEvento"></h5>
@@ -200,13 +201,6 @@ mysqli_close($conn);
                                     alert("Hay un error ..");
                                 }
                             });
-                        }
-                        $('.clockpicker').clockpicker();
-                        function limpiarFormulario(){
-                            $('#txtID').val('');
-                            $('#txtTitulo').val('');
-                            $('#txtColor').val('');
-                            $('#txtCompanion').val('');
                         }
                     </script>
                 </fieldset>

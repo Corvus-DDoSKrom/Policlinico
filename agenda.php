@@ -243,6 +243,7 @@ mysqli_close($conn);
                                 end:$('#txtFecha').val()+" "+$('#txtHora').val(),
                                 id_doctor:$('#id_doctor').val(),
                                 id_specialty:$('#id_specialty').val(),
+                                estado:"1",
                             };
                         }
                         function EnviarInformacion(accion,objEvento,modal){

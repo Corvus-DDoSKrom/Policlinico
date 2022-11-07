@@ -45,11 +45,6 @@ $result=mysqli_query($conn, $db_consulting);
     </div>
 
     <div class="all-1">
-        <div class="menu">
-            <nav class="menuvertical-1">
-
-            </nav>
-        </div>
         <!-- Área Central -->
         <div class="form-5">
             <div class="form-2">

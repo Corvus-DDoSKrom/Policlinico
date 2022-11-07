@@ -46,8 +46,6 @@ mysqli_close($conn);
         </nav>
     </div>    
     <div class="all-1">
-   
-        </div>
         <div class="form-5">
             <div class="form-2">
                 <div class="div-users">
