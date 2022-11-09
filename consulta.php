@@ -57,112 +57,113 @@ $view = mysqli_fetch_array($result);
                     </div>
                 </div>
                 <form method="POST" action="consulta.php">
-                    <fieldset class="form-4">
-                        <div class="form-left">
-                            <input type="hidden" id="txtID" name="id" value="<?php echo $view2['id']; ?>">
+                    <fieldset class="form-9">
+                        <input type="hidden" id="txtID" name="id" value="<?php echo $view2['id']; ?>">
+                        <input type="hidden" id="id_patient" name="id_patient" value="<?php echo $view['id_patient']; ?>">
+                        <div>
                             <div>
                                 <h2>DATOS DEL PACIENTE</h2>
-                                <label for="nombre">NOMBRE</label> <!--NOMBRE DEL PACIENTE-->
-                                <br>
-                                <input class="controls-2" type="text" name="name_patient" id="nombre" value="<?php echo $view['name_patient']; ?>" disabled=»disabled>
+                            </div>
+                        </div>
+                        <div class="div-4">
+                            <div class="div-5">
+                                <label class="controls-10" for="nombre">NOMBRE</label> <!--NOMBRE DEL PACIENTE-->
+                                <input class="controls-9" type="text" name="name_patient" id="nombre" value="<?php echo $view['name_patient']; ?>" disabled=»disabled>
                             </div> <!--FIN DE NOMBRE PACIENTE-->
-                            <div>
-                                <label for="apellido">APELLIDO</label> <!--APELLIDO DEL PACIENTE-->
-                                <br>
-                                <input class="controls-2" type="text" name="surname_patient" id="apellido" value="<?php echo $view['surname_patient']; ?>" disabled=»disabled>
+                            <div class="div-5">
+                                <label class="controls-10" for="apellido">APELLIDO</label> <!--APELLIDO DEL PACIENTE-->
+                                <input class="controls-9" type="text" name="surname_patient" id="apellido" value="<?php echo $view['surname_patient']; ?>" disabled=»disabled>
                             </div> <!--FIN APELLIDO DELM PACIENTE-->
-                            <div>
-                                <label for="cedula">CEDULA</label> <!--CEDULA DEL PACIENTE-->
-                                <br>
-                                <input class="controls-2" type="number" name="ci_patient" id="cedula" value="<?php echo $view['ci_patient']; ?>" disabled=»disabled>
+                            <div class="div-5">
+                                <label class="controls-10" for="cedula">CEDULA</label> <!--CEDULA DEL PACIENTE-->
+                                <input class="controls-9" type="number" name="ci_patient" id="cedula" value="<?php echo $view['ci_patient']; ?>" disabled=»disabled>
                             </div> <!--FIN DE CEDULA PACIENTE-->
-                            <div>
-                                <label for="age">EDAD</label> <!--CEDULA DEL PACIENTE-->
-                                <br>
-                                <input class="controls-2" type="text" name="age" id="age" value="<?php echo $view['age']; ?>" disabled>
+                            <div class="div-5">
+                                <label class="controls-10" for="age">EDAD</label> <!--CEDULA DEL PACIENTE-->
+                                <input class="controls-9" type="text" name="age" id="age" value="<?php echo $view['age']; ?>" disabled>
                             </div>
-                            <div>
-                                <label for="sex">SEXO</label> <!--CEDULA DEL PACIENTE-->
-                                <br>
-                                <input class="controls-2" type="text" style="text-transform:uppercase;" name="sex" id="sex" value="<?php echo $view['sex']; ?>" disabled>
+                            <div class="div-5">
+                                <label class="controls-10" for="sex">SEXO</label> <!--CEDULA DEL PACIENTE-->
+                                <input class="controls-9" type="text" style="text-transform:uppercase;" name="sex" id="sex" value="<?php echo $view['sex']; ?>" disabled>
                             </div>
+                        </div>
+                        <div>
                             <div>
-                                <label for="motivo">MOTIVO DE CONSULTA</label> <!--TELEFONO DEL PACIENTE-->
-                                <br>
-                                <input class="controls-2" type="text" name="motivo_consulta">
-                            </div> <!--FIN TELEFONO DEL PACIENTE-->
-                            <div>
-                                <label for="antecedentes">ANTECEDENTE DE ENFERMEDAD</label>
-                                <br>
-                                <input class="controls-2" type="text" name="antecedente_consulta">
-                            </div> <!--FIN ANTECEDENTE DE PACIENTE-->
-                            <div>
-                                <label for="diagnostico">DIAGNOSTICO</label>
-                                <br>
-                                <input class="controls-2" type="text" name="diagnostico">
-                            </div> <!--FIN ANTECEDENTE DE PACIENTE-->
-                            <div>
-                                <h2>EXÁMEN FÍSICO</h2>
-                                <label for="peso">PESO</label>
-                                <br>
-                                <input class="controls-2" type="text" name="peso_consulta">
+                                <h2>EXÁMEN FÍSICO - SIGNOS VITALES</h2>
+                            </div>
+                        </div>
+                        <div class="div-4">
+                            <div class="div-5">
+                                <label class="controls-10" for="peso">PESO</label>
+                                <input class="controls-9" type="text" name="peso_consulta">
                             </div> <!--FIN PESO DE PACIENTE-->
-                            <div>
-                                <label for="altura">ALTURA</label>
-                                <br>
-                                <input class="controls-2" type="text" name="altura_consulta">
+                            <div class="div-5">
+                                <label class="controls-10" for="altura">ALTURA</label>
+                                <input class="controls-9" type="text" name="altura_consulta">
                             </div> <!--FIN ALTURA DE PACIENTE-->
-                        </div>
-                        <div class="form-right">
-                            <div>
-                                <h2>SIGNOS VITALES</h2>
-                                <label for="presion">PRESIÓN ARTERIAL</label>
-                                <br>
-                                <input class="controls-2" type="text" name="presion_consulta">
+                            <div class="div-5">
+                                <label class="controls-10" for="presion">PRESIÓN A.</label>
+                                <input class="controls-9" type="text" name="presion_consulta">
                             </div> <!--FIN PRESION DE PACIENTE-->
-                            <div>
-                                <label for="respiracion">RESPIRACIÓN</label>
-                                <br>
-                                <input class="controls-2" type="text" name="respiracion_consulta">
-                            </div> <!--FIN RESPIRACION DE PACIENTE-->
-                            <div>
-                                <label for="pulso">PULSO</label>
-                                <br>
-                                <input class="controls-2" type="text" name="pulso_consulta">
-                            </div> <!--FIN PULSO DE PACIENTE-->
-                            <div>
-                                <label for="temperatura">TEMPERATURA</label>
-                                <br>
-                                <input class="controls-2" type="text" name="temperatura_consulta">
-                            </div> <!--FIN TEMPERATURA DE PACIENTE-->
-                            <div>
-                                <h2>MEDIDA AUXILIAR DE DIAGNOSTICO</h2>
-                                <label for="auxiliar">DIAGNOSTICO AUXILIAR</label>
-                                <br>
-                                <input class="controls-2" type="text" name="auxiliar_consulta">
-                            </div> <!--FIN AUXILIAR DE PACIENTE-->
-                            <div>
-                                <label for="impresion">IMPRESION DE DIAGNOSTICO</label>
-                                <br>
-                                <input class="controls-2" type="text" name="impresion_consulta">
-                            </div> <!--FIN IMPRESION DE PACIENTE-->
-                            <div>
-                                <label for="tratamiento">TRATAMIENTO</label>
-                                <br>
-                                <input class="controls-2" type="text" name="tratamiento_consulta">
-                            </div> <!--FIN TRATAMIENTO DE PACIENTE-->
-                            <div>
-                                <label for="cie10">CIE10</label>
-                                <br>
-                                <input class="controls-2" type="text" name="cie10_consulta">
-                            </div> <!--FIN TRATAMIENTO DE PACIENTE-->
-                            <div>
-                                <label for="proxima">PROXIMA CONSULTA</label>
-                                <br>
-                                <input class="controls-2" type="text" name="proxima_consulta">
-                            </div> <!--FIN PROXIMA CONSULTA DE PACIENTE-->
                         </div>
-                    </fielset>
+                        <div class="div-4">
+                            <div class="div-5">
+                                <label class="controls-10" for="respiracion">RESPIRACIÓN</label>
+                                <input class="controls-9" type="text" name="respiracion_consulta">
+                            </div> <!--FIN RESPIRACION DE PACIENTE-->
+                            <div class="div-5">
+                                <label class="controls-10" for="pulso">FREC. C.</label>
+                                <input class="controls-9" type="text" name="pulso_consulta">
+                            </div> <!--FIN PULSO DE PACIENTE-->
+                            <div class="div-5">
+                                <label class="controls-10" for="temperatura">TEMPERATURA</label>
+                                <input class="controls-9" type="text" name="temperatura_consulta">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div>
+                            <label class="tam-label" for="motivo">MOTIVO DE CONSULTA</label> <!--TELEFONO DEL PACIENTE-->
+                            <br>
+                            <textarea rows="4" class="controls-11" style="resize: none;"></textarea>
+                        </div> <!--FIN TELEFONO DEL PACIENTE-->
+                        <div>
+                            <label class="tam-label" for="antecedentes">ANTECEDENTE DE ENFERMEDAD ACTUAL</label>
+                            <br>
+                            <textarea rows="4" class="controls-11" style="resize: none;"></textarea>
+                        </div> <!--FIN ANTECEDENTE DE PACIENTE-->
+                        <div>
+                            <label class="tam-label" for="diagnostico">DIAGNOSTICO</label>
+                            <br>
+                            <textarea rows="4" class="controls-11" style="resize: none;"></textarea>
+                        </div> <!--FIN ANTECEDENTE DE PACIENTE-->
+                        <div>
+                            <h2>MEDIO AUXILIAR DE DIAGNOSTICO</h2>
+                            <label class="tam-label" for="auxiliar">DIAGNOSTICO AUXILIAR</label>
+                            <br>
+                            <textarea rows="4" class="controls-11" style="resize: none;"></textarea>
+                        </div> <!--FIN AUXILIAR DE PACIENTE-->
+                        <div>
+                            <label class="tam-label" for="impresion">IMPRESION DE DIAGNOSTICO</label>
+                            <br>
+                            <textarea rows="4" class="controls-11" style="resize: none;"></textarea>
+                        </div> <!--FIN IMPRESION DE PACIENTE-->
+                        <div>
+                            <label class="tam-label" for="tratamiento">TRATAMIENTO</label>
+                            <br>
+                            <textarea rows="4" class="controls-11" style="resize: none;"></textarea>
+                        </div> <!--FIN TRATAMIENTO DE PACIENTE-->
+                        <div>
+                            <label for="cie10">CIE10</label>
+                            <br>
+                            <input class="controls-2" type="text" name="cie10_consulta">
+                        </div> <!--FIN TRATAMIENTO DE PACIENTE-->
+                        <div>
+                            <label for="proxima">PROXIMA CONSULTA</label>
+                            <br>
+                            <input class="controls-2" type="text" name="proxima_consulta">
+                        </div> <!--FIN PROXIMA CONSULTA DE PACIENTE-->
+                    </fieldset>
                     <br>
                     <button class="myButton" type="submit" name="buttonguardar">Guardar</button><!--este apartado esta para guardar los cambios realizados en la casillas anteriores -->
                     <button class="myButton" type="reset">Cancelar</button><!--este apartado esta para cancelar los cambios realizados en la casillas anteriores -->
@@ -176,6 +177,7 @@ $view = mysqli_fetch_array($result);
     // Obteniendo la fecha actual del sistema con PHP
     if(isset($_POST['buttonguardar'])){
         $fecha = date('d-m-Y');
+        $id_patient = $_POST["id_patient"];
         $id = $_POST["id"];
         $motivo = $_POST["motivo_consulta"];
         $antecedente = $_POST["antecedente_consulta"];
@@ -198,6 +200,14 @@ $view = mysqli_fetch_array($result);
         $update = mysqli_query($conn, $db_update);
         if($result2){/*si todo esta correcto procede a guardar en la base de datos*/
             echo "<script> alert('Consulta guardado con éxito.');window.location= 'panel_doctor' </script>";
+            $id_user2 = $_SESSION['id_doctor'];
+            $db_consultar = "SELECT * FROM detalle_consulta ORDER by id_detalle_consulta DESC LIMIT 1";
+            $resultado = mysqli_query($conn, $db_consultar);
+            while ($row = mysqli_fetch_array($resultado)){
+                $id_detalle_consulta = $row['id_detalle_consulta'];
+            }
+            $db_insert = "INSERT INTO consulta (id_patient, id_detalle_consulta, id_doctor) VALUES ('$id_patient', '$id_detalle_consulta', '$id_user2')";
+            $resultconsult = mysqli_query($conn, $db_insert);
         }else {
                     echo "Error: " .$sql."<br>".mysql_error($conn);/*si no, se imprime en pantalla el mensaje de error*/
         }   

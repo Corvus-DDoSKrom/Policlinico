@@ -32,7 +32,9 @@ $result=mysqli_query($conn, $db_consulting);
                 <!--este apartado esta para abrir los usuarios registrados -->
                 <a href="doctor"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
                 <!--este apartado esta para abrir los profesionales encargados -->
-                <a href="student"><i class="fa-solid fa-graduation-cap"></i> Alumnos</a>
+
+                <!-- <a href="student"><i class="fa-solid fa-graduation-cap"></i> Alumnos</a> -->
+                 
                 <!--este apartado esta para abrir los Alumnos registrados -->
                 <a href="specialty"><i class="fa-solid fa-stethoscope"></i> Especialidades</a>
                 <!--este apartado esta para abrir la lista de las especialidades -->

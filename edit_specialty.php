@@ -33,7 +33,9 @@ $view = mysqli_fetch_array($result);
                 <!--este apartado esta para abrir los usuarios registrados -->
                 <a href="register_doctor"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
                 <!--este apartado esta para abrir los profesionales encargados -->
-                <a href="student"><i class="fa-solid fa-graduation-cap"></i> Alumnos</a>
+
+                <!-- <a href="student"><i class="fa-solid fa-graduation-cap"></i> Alumnos</a> -->
+
                 <!--este apartado esta para abrir los usuarios registrados -->
                 <a href="specialty"><i class="fa-solid fa-stethoscope"></i> Especialidades</a>
                 <!--este apartado esta para abrir la lista de las especialidades -->
@@ -41,7 +43,7 @@ $view = mysqli_fetch_array($result);
                 <!--este apartado esta para abrir los usuarios registrados -->
                 <a href="about.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
                 <!--este apartado esta para abrir el menu de ayuda -->
-                <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesion</a> <!--este apartado esta para cerrar la sesion de la cuenta ingresada -->
+                <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a> <!--este apartado esta para cerrar la sesion de la cuenta ingresada -->
         </nav>
     </div>
     <div class="all-1">

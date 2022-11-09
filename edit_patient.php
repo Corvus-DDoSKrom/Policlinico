@@ -110,7 +110,7 @@ $view = mysqli_fetch_array($result);
                         </div>
                     </fieldset>
                     <br>
-                    <button class="myButton" type="submit">GUARDAR</button>
+                    <button class="myButton" type="submit" name="buttonguardar">GUARDAR</button>
                     <button class="myButton" type="reset">CANCELAR</button>
                 </form>
             </div>
@@ -121,6 +121,7 @@ $view = mysqli_fetch_array($result);
     require 'config/connection.php';
     /* Aqui comienza la validacion de datos */
     if(isset($_POST['name_patient'])){
+        $id_patient = $_POST["id_patient"];
         $name_patient = $_POST["name_patient"];
         $surname_patient = $_POST["surname_patient"];
         $ci_patient = $_POST["ci_patient"];
@@ -132,20 +133,15 @@ $view = mysqli_fetch_array($result);
         $age = $_POST["age"];
         $sex = $_POST["sex"];
     /*Fin de la validacion de datos*/
-        $db_consulting="SELECT*FROM patient where (name_patient='$name_patient') AND (surname_patient='$surname_patient')"; 
-        $result = mysqli_query($conn, $db_consulting);
-        $row = mysqli_num_rows($result);
-        $view = mysqli_fetch_array($conn, $db_consulting);
-        if($row==0){/* Este codigo sirve para verificar si todos los datos son correctos*/
-            $sql = "INSERT INTO patient (name_patient, surname_patient, ci_patient, phone_patient, date_of_birth, nationality, residence, marital_status, age, sex) VALUES ('$name_patient', '$surname_patient', '$ci_patient', '$phone_patient', '$date_of_birth', '$nationality', '$residence', '$marital_status', '$age', '$sex')";
-            $result = mysqli_query($conn, $sql);
-            if($result){/*si todo esta correcto procede a guardar en la base de datos*/
-                    echo "<script> alert('Paciente $name_patient $surname_patient registrado con éxito.');window.location= 'agenda.php' </script>";
-            }else {
-                    echo "Error: " .$sql."<br>".mysql_error($conn);/*si no, se imprime en pantalla el mensaje de error*/
+        if(isset($_POST["buttonguardar"])){             /*Modificar los datos*/
+            $db_updating = "UPDATE patient SET name_patient='$name_patient', surname_patient='$surname_patient', ci_patient='$ci_patient', phone_patient='$phone_patient', date_of_birth='$date_of_birth', nationality='$nationality', residence='$residence', marital_status='$marital_status', age='$age', sex='$sex' WHERE id_patient=$id_patient";
+            $result = mysqli_query($conn, $db_updating);
+            if($result){                                /*Mensaje de modificado exitoso*/
+                echo "<script> alert('Doctor/a modificado: $nombre $apellido');window.location= 'student' </script>";
             }
-        }else{
-                    echo "<script> alert('No puedes registrar a este paciente con: $name_patient $surname_patient');window.location= 'register_student' </script>";
+            else{                                       /*Mensaje de error*/
+                echo "Error: " .$sql."<br>".mysql_error($conn);
+            }
         }
     }/*Fin de validacion de datos*/
         mysqli_close($conn);

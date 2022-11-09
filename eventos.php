@@ -17,7 +17,7 @@
                 "start" => $_POST['start'],
                 "end" => $_POST['end'],
                 "id_doctor" => $_POST['id_doctor'],
-                "id_specialty" => $_POST['id_specialty']
+                "id_specialty" => $_POST['id_specialty'],
                 "estado" => $_POST['estado']
             ));
             echo json_encode($respuesta);

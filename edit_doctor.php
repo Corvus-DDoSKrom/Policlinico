@@ -34,7 +34,9 @@ $view = mysqli_fetch_array($result);
         <nav class="menuhorizontal">
                 <a href="panel_admin"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
                 <a href="doctor"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
-                <a href="student"><i class="fa-solid fa-graduation-cap"></i> Alumnos</a>
+
+                <!-- <a href="student"><i class="fa-solid fa-graduation-cap"></i> Alumnos</a> -->
+
                 <a href="specialty"><i class="fa-solid fa-stethoscope"></i> Especialidades</a>
                 <a href="user"><i class="fa-solid fa-user"></i> Usuario</a> 
                 <a href="about.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a>    

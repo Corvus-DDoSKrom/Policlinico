@@ -34,7 +34,9 @@ mysqli_close($conn);
                 <!--este apartado esta para abrir los usuarios registrados -->
                 <a href="doctor"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
                 <!--este apartado esta para abrir los profesionales encargados -->
-                <a href="student"><i class="fa-solid fa-graduation-cap"></i> Alumnos</a>
+
+                <!-- <a href="student"><i class="fa-solid fa-graduation-cap"></i> Alumnos</a> -->
+                
                 <!--este apartado esta para abrir los Alumnos registrados -->
                 <a href="specialty"><i class="fa-solid fa-stethoscope"></i> Especialidades</a>
                 <!--este apartado esta para abrir la lista de las especialidades -->
@@ -46,18 +48,19 @@ mysqli_close($conn);
         </nav>
     </div>
     <div class="all-1">
-    
-    <!--Fin del menu vertical -->
-
     <!--Inicio de la seccion de Alumno -->
         <div class="form-5">
             <div class="form-2">
                 <div class="div-users">
-                    <div class="div-user">
-                        <h1>ALUMNOS</h1>
+                    <div class="div-2">
+                        <div class="div-user">
+                            <h1>ALUMNOS</h1>
+                        </div>
                     </div>
-                    <div class="div-add-user">
-                        <a class="myButton" href="register_student"><i class="fa-solid fa-plus"></i> Añadir alumno</a><!--este apartado es para el boton de añadir alumnos -->
+                    <div class="div-3">
+                        <div class="div-add-user">
+                            <a class="myButton" href="register_student"><i class="fa-solid fa-plus"></i> Añadir alumno</a><!--este apartado es para el boton de añadir alumnos -->
+                        </div>
                     </div>
                 </div>
                 <!--Inicio de la tabla en donde se visualizara los datos del alumno -->

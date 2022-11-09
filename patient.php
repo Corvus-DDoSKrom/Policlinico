@@ -30,12 +30,12 @@ mysqli_close($conn);
     <div class="nav-bar">
         <a class="logo" href="panel_reception"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
-                <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a>
-                <a href="panel_reception"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
-                <a href="agenda"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
-                <a href="register_patient"><i class="fa-solid fa-person-half-dress"></i> Registrar Paciente</a>
-                <a href="patient"><i class="fa-solid fa-person-half-dress"></i> Paciente</a>
-                <a href="about.php"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
+            <a href="panel_reception"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
+            <a href="agenda"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
+            <a href="register_patient"><i class="fa-solid fa-person-half-dress"></i> Registrar Paciente</a>
+            <a href="patient"><i class="fa-solid fa-person-half-dress"></i> Paciente</a>
+            <a href="about.php"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
+            <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a>
         </nav>
     </div>
     <div class="all-1">
@@ -45,11 +45,15 @@ mysqli_close($conn);
         <div class="form-5">
             <div class="form-2">
                 <div class="div-users">
-                    <div class="div-user">
-                        <h1>PACIENTES</h1>
+                    <div class="div-2">
+                        <div class="div-user">
+                            <h1>PACIENTES</h1>
+                        </div>
                     </div>
-                    <div class="div-add-user">
-                        <a class="myButton" href="register_patient"><i class="fa-solid fa-plus"></i> REGISTRAR PACIENTE</a>
+                    <div class="div-3">
+                        <div class="div-add-user">
+                            <a class="myButton" href="register_patient"><i class="fa-solid fa-plus"></i> REGISTRAR PACIENTE</a>
+                        </div>
                     </div>
                 </div>
                 <fieldset class="form-4">

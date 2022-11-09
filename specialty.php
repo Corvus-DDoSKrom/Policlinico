@@ -33,8 +33,10 @@ mysqli_close($conn);
         <nav class="menuhorizontal">
                 <a href="panel_admin"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
                 <a href="doctor"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
-                <a href="student"><i class="fa-solid fa-graduation-cap"></i> Alumnos</a>
-                <a href="specialty"><i class="fa-solid fa-stethoscope"></i> Especialidad</a>
+
+                <!-- <a href="student"><i class="fa-solid fa-graduation-cap"></i> Alumnos</a> -->
+                
+                <a href="specialty"><i class="fa-solid fa-stethoscope"></i> Especialidades</a>
                 <a href="user"><i class="fa-solid fa-user"></i> Usuario</a> 
                 <a href="about.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
                 <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a>
@@ -45,11 +47,15 @@ mysqli_close($conn);
         <div class="form-5">
             <div class="form-2">
                 <div class="div-users">
-                    <div class="div-user">
-                        <h1>ESPECIALIDAD</h1>
-                    </div>
-                    <div class="div-add-user">
-                        <a class="myButton" href="register_specialty"><i class="fa-solid fa-plus"></i> Añadir nueva especialidad</a>
+                    <div class="div-2">
+                        <div class="div-user">
+                            <h1>ESPECIALIDAD</h1>
+                        </div>
+                    </div>    
+                    <div class="div-3">
+                        <div class="div-add-user">
+                            <a class="myButton" href="register_specialty"><i class="fa-solid fa-plus"></i> Añadir nueva especialidad</a>
+                        </div>
                     </div>
                 </div>
                 <fieldset class="form-4">
