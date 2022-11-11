@@ -29,6 +29,7 @@ if(isset($_GET["buttonlogin"])){
                     $_SESSION['user_logged_in'] = TRUE;
                     $_SESSION['privilege'] = 'DOCTOR';
                     $_SESSION['id_doctor'] = $view_doctor['id_doctor'];
+                    $_SESSION['name_doctor'] = $view_doctor['name_doctor'];
                 }
             }
             elseif($privilege==3){ /*este apartado registra si el usuario es alumno*/

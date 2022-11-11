@@ -59,6 +59,7 @@ $view = mysqli_fetch_array($result);
                 <form method="POST" action="consulta.php">
                     <fieldset class="form-9">
                         <input type="hidden" id="txtID" name="id" value="<?php echo $view2['id']; ?>">
+                        <input type="hidden" id="id_specialty" name="id_specialty" value="<?php echo $view2['id_specialty']; ?>">
                         <input type="hidden" id="id_patient" name="id_patient" value="<?php echo $view['id_patient']; ?>">
                         <div>
                             <div>
@@ -125,33 +126,33 @@ $view = mysqli_fetch_array($result);
                         <div>
                             <label class="tam-label" for="motivo">MOTIVO DE CONSULTA</label> <!--TELEFONO DEL PACIENTE-->
                             <br>
-                            <textarea rows="4" class="controls-11" style="resize: none;"></textarea>
+                            <textarea rows="4" class="controls-11" style="resize: none;" name="motivo_consulta"></textarea>
                         </div> <!--FIN TELEFONO DEL PACIENTE-->
                         <div>
                             <label class="tam-label" for="antecedentes">ANTECEDENTE DE ENFERMEDAD ACTUAL</label>
                             <br>
-                            <textarea rows="4" class="controls-11" style="resize: none;"></textarea>
+                            <textarea rows="4" class="controls-11" style="resize: none;" name="antecedente_consulta"></textarea>
                         </div> <!--FIN ANTECEDENTE DE PACIENTE-->
                         <div>
                             <label class="tam-label" for="diagnostico">DIAGNOSTICO</label>
                             <br>
-                            <textarea rows="4" class="controls-11" style="resize: none;"></textarea>
+                            <textarea rows="4" class="controls-11" style="resize: none;" name="diagnostico"></textarea>
                         </div> <!--FIN ANTECEDENTE DE PACIENTE-->
                         <div>
                             <h2>MEDIO AUXILIAR DE DIAGNOSTICO</h2>
                             <label class="tam-label" for="auxiliar">DIAGNOSTICO AUXILIAR</label>
                             <br>
-                            <textarea rows="4" class="controls-11" style="resize: none;"></textarea>
+                            <textarea rows="4" class="controls-11" style="resize: none;" name="auxiliar_consulta"></textarea>
                         </div> <!--FIN AUXILIAR DE PACIENTE-->
                         <div>
                             <label class="tam-label" for="impresion">IMPRESION DE DIAGNOSTICO</label>
                             <br>
-                            <textarea rows="4" class="controls-11" style="resize: none;"></textarea>
+                            <textarea rows="4" class="controls-11" style="resize: none;" name="impresion_consulta"></textarea>
                         </div> <!--FIN IMPRESION DE PACIENTE-->
                         <div>
                             <label class="tam-label" for="tratamiento">TRATAMIENTO</label>
                             <br>
-                            <textarea rows="4" class="controls-11" style="resize: none;"></textarea>
+                            <textarea rows="4" class="controls-11" style="resize: none;" name="tratamiento_consulta"></textarea>
                         </div> <!--FIN TRATAMIENTO DE PACIENTE-->
                         <div>
                             <label for="cie10">CIE10</label>
@@ -178,6 +179,7 @@ $view = mysqli_fetch_array($result);
     if(isset($_POST['buttonguardar'])){
         $fecha = date('d-m-Y');
         $id_patient = $_POST["id_patient"];
+        $id_specialty = $_POST["id_specialty"];
         $id = $_POST["id"];
         $motivo = $_POST["motivo_consulta"];
         $antecedente = $_POST["antecedente_consulta"];
@@ -206,7 +208,7 @@ $view = mysqli_fetch_array($result);
             while ($row = mysqli_fetch_array($resultado)){
                 $id_detalle_consulta = $row['id_detalle_consulta'];
             }
-            $db_insert = "INSERT INTO consulta (id_patient, id_detalle_consulta, id_doctor) VALUES ('$id_patient', '$id_detalle_consulta', '$id_user2')";
+            $db_insert = "INSERT INTO consulta (id_patient, id_detalle_consulta, id_doctor, id_specialty) VALUES ('$id_patient', '$id_detalle_consulta', '$id_user2', $id_specialty)";
             $resultconsult = mysqli_query($conn, $db_insert);
         }else {
                     echo "Error: " .$sql."<br>".mysql_error($conn);/*si no, se imprime en pantalla el mensaje de error*/
