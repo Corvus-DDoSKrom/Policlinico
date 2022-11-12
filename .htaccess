@@ -5,6 +5,7 @@ Options +FollowSymLinks
 RewriteEngine on
 
 RewriteRule ^login$ index.php
+RewriteRule ^report$ report.php
 RewriteRule ^agenda$ agenda.php
 RewriteRule ^student$ students.php
 RewriteRule ^patient$ patient.php

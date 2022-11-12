@@ -75,7 +75,7 @@ mysqli_close($conn);
                                 <td><?php echo $row['name_doctor']; ?></td>
                                 <td><?php echo $row['title']; ?></td>
                                 <td>
-                                    <a class="myButton-histo" href="#"><span></span>Ver historial</a>
+                                    <a class="myButton-histo" href="report?id_consulta=<?php echo $row['id_consulta'];?>"><span></span>Ver historial</a>
                                 </td>
                             </tr>
                             <?php 
