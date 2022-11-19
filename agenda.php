@@ -51,9 +51,8 @@ mysqli_close($conn);
 <body>
     <!-- Menus -->
     <div class="nav-bar">
-        <a class="logo" href="panel_reception"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
+        <a class="logo" href="agenda"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
-            <a href="panel_reception"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
             <a href="agenda"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
             <a href="register_patient"><i class="fa-solid fa-person-half-dress"></i> Registrar Paciente</a>
             <a href="patient"><i class="fa-solid fa-person-half-dress"></i> Paciente</a>
@@ -97,7 +96,6 @@ mysqli_close($conn);
                                     $('#id_patient').val(calEvent.id_patient);
                                     $('#txtCompanion').val(calEvent.companion);
                                     $('#txtID').val(calEvent.id);
-                                    $('#txtTitulo').val(calEvent.title);
                                     $('#txtColor').val(calEvent.color);
                                     FechaHora= calEvent.start._i.split(" ");
                                     $('#txtFecha').val(FechaHora[0]);   
@@ -106,17 +104,20 @@ mysqli_close($conn);
                                     $("#ModalEventos").modal();
                                 },
                                 editable:true,
-                                eventDrop:function(calEvent){
+                                eventDrop:function(calEvent,jsEvent){
                                     $('#txtID').val(calEvent.id);
-                                    $('#txtTitulo').val(calEvent.title);
-                                    $('#txtColor').val(calEvent.color);
+                                    $('#tituloEvento').val(calEvent.title);
+                                    $('#id_patient').val(calEvent.id_patient);
                                     $('#txtCompanion').val(calEvent.companion);
+                                    $('#txtColor').val(calEvent.color);  
+                                    $('#id_doctor').val(calEvent.id_doctor);
+                                    $('#id_specialty').val(calEvent.id_specialty);
                                     var fechaHora=calEvent.start.format().split("T");
                                     $('#txtFecha').val(fechaHora[0]);
                                     $('#txtHora').val(fechaHora[1]);
                                     RecolectarDatosGUI();
                                     EnviarInformacion('modificar',NuevoEvento,true);
-                                }
+                                },
                             });
                         });
                     </script>

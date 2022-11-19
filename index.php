@@ -41,7 +41,7 @@ mysqli_close($conn);
 		<h2>BIENVENIDO</h2><!--El titulo-->
 		<form method = "GET" action = "authenticate.php">
 			<input class="controls" type="text" style="text-transform:uppercase;" name="username" placeholder="Usuario"><!-- Campo de Usuario-->
-			<input class="controls" type="password" name="passwd" id="passwd" placeholder="Contraseña"><!--Campo de Contrase;a-->
+			<input class="controls" type="password" name="passwd" id="passwd" placeholder="CONTRASEÑA"><!--Campo de Contrase;a-->
 			<input class="check" type="checkbox" onclick="view_password()" > Mostrar contraseña
 			<input href="authenticate.php" class="myButton" type="submit" name="buttonlogin" /><!--Boton de Ingresar-->
 		</form>

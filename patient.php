@@ -28,9 +28,8 @@ mysqli_close($conn);
 <body>
     <!-- Menu -->
     <div class="nav-bar">
-        <a class="logo" href="panel_reception"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
+        <a class="logo" href="agenda"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
         <nav class="menuhorizontal">
-            <a href="panel_reception"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
             <a href="agenda"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
             <a href="register_patient"><i class="fa-solid fa-person-half-dress"></i> Registrar Paciente</a>
             <a href="patient"><i class="fa-solid fa-person-half-dress"></i> Paciente</a>
@@ -67,6 +66,7 @@ mysqli_close($conn);
                                 <th scope="col">FECHA DE NACIMIENTO</th>
                                 <th scope="col">NACIONALIDAD</th>
                                 <th scope="col">RESIDENCIA</th>
+                                <th scope="col">BARRIO</th>
                                 <th scope="col">ESTADO CIVIL</th>
                                 <th scope="col">EDAD</th>
                                 <th scope="col">SEXO</th><
@@ -93,6 +93,7 @@ mysqli_close($conn);
                                 <td><?php echo $row['date_of_birth'];?></td>
                                 <td><?php echo $row['nationality'];?></td>
                                 <td><?php echo $row['residence'];?></td>
+                                <td><?php echo $row['barrio'];?></td>
                                 <td><?php echo $row['marital_status'];?></td>
                                 <td><?php echo $row['age'];?></td>
                                 <td><?php echo $row['sex'];?></td>

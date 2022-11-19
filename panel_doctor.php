@@ -51,12 +51,10 @@ mysqli_close($conn);
 <body>
     <!-- Menus -->
     <div class="nav-bar">
-        <a class="logo" href="panel_reception"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
-        <nav class="menuhorizontal">
-            <a href="panel_doctor"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
-            <a href="agenda"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
-            <a href="register_patient"><i class="fa-solid fa-person-half-dress"></i> Registrar Paciente</a>
-            <a href="patient"><i class="fa-solid fa-person-half-dress"></i> Paciente</a>
+        <a class="logo" href="panel_doctor"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
+        <nav class="menuhorizontal"> 
+            <a href="panel_doctor"><i class="fa-solid fa-calendar-days"></i> AGENDA</a>
+            <a href="historial"><i class="fa-solid fa-book-medical"></i> HISTORIAL</a>
             <a href="about.php"><i class="fa-solid fa-circle-question"></i> Ayuda</a>
             <a href="logout.php"><i class="fa-solid fa-person-walking-arrow-right"></i> Cerrar Sesión</a>
         </nav>
@@ -69,8 +67,6 @@ mysqli_close($conn);
                         <div id="CalendarioWeb">
                         </div>
                     </div>
-                    
-                    <!-- MODAL AL EDITAR DESDE EL CALENDARIO: eventos de click y desplazamiento, botones -->
                     <script>
                         $(document).ready(function(){
                             $('#CalendarioWeb').fullCalendar({
@@ -166,8 +162,6 @@ mysqli_close($conn);
                             </div>
                         </div>
                     </form>
-            
-                    <!-- MODAL al agregar - modificar - eliminar nuevo evento / consultorio -->
                     <script>
                         var NuevoEvento;
 

@@ -6,6 +6,8 @@ RewriteEngine on
 
 RewriteRule ^login$ index.php
 RewriteRule ^report$ report.php
+RewriteRule ^historial$ busqueda.html
+RewriteRule ^consulta$ consulta.php
 RewriteRule ^agenda$ agenda.php
 RewriteRule ^student$ students.php
 RewriteRule ^patient$ patient.php

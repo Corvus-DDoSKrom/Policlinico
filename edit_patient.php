@@ -28,9 +28,8 @@ $view = mysqli_fetch_array($result);
 <body>
     <!-- MENU HORIZONTAL -->
     <div class="nav-bar">
-        <a class="logo" href="panel_reception"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
-        <nav class="menuhorizontal">
-                <a href="panel_reception"><i class="fa-solid fa-house-medical"></i> Inicio</a> 
+        <a class="logo" href="agenda"><img class="site-logo" src="assets/img/logo.png" alt=""></a>
+        <nav class="menuhorizontal"> 
                 <a href="agenda"><i class="fa-solid fa-calendar-days"></i> Agenda</a>
                 <a href="register_patient"><i class="fa-solid fa-person-half-dress"></i> Registrar Paciente</a>
                 <a href="patient"><i class="fa-solid fa-person-half-dress"></i> Paciente</a>

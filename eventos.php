@@ -24,7 +24,6 @@
         break;
         case 'modificar':
             //Instruccion modificar
-    
             $sentenciaSQL=$pdo->prepare("UPDATE eventos SET 
             id_patient=:id_patient,
             companion=:companion,
@@ -33,13 +32,13 @@
             start=:start,
             end=:end,
             id_doctor=:id_doctor,
-            id_specialty=:id_specialty
+            id_specialty=:id_specialty,
             estado=:estado
-            WHERE ID=:ID
+            WHERE id=:id
             ");
 
             $respuesta = $sentenciaSQL->execute(array(
-                "ID" => $_POST['id'],
+                "id" => $_POST['id'],
                 "id_patient" => $_POST['id_patient'],
                 "companion" => $_POST['companion'],
                 "color" => $_POST['color'],
@@ -58,8 +57,8 @@
     
             if(isset($_POST['id'])){
     
-                $sentenciaSQL=$pdo->prepare("DELETE FROM eventos WHERE ID=:ID");
-                $respuesta= $sentenciaSQL->execute(array("ID"=>$_POST['id']));
+                $sentenciaSQL=$pdo->prepare("DELETE FROM eventos WHERE id=:id");
+                $respuesta= $sentenciaSQL->execute(array("id"=>$_POST['id']));
     
             }
             echo json_encode($respuesta);
