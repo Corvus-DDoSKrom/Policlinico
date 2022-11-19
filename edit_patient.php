@@ -93,6 +93,11 @@ $view = mysqli_fetch_array($result);
                                 <input class="controls-2" type="text" name="residence" id="residencia" value="<?php echo $view['residence']; ?>">
                             </div>
                             <div>
+                                <label for="barrio">BARRIO</label>
+                                <br>
+                                <input class="controls-2" type="text" name="barrio" id="barrio" value="<?php echo $view['barrio']; ?>">
+                            </div>
+                            <div>
                                 <label for="estadocivil">ESTADO CIVIL</label>
                                 <br>
                                 <select class="controls-2" name="marital_status" id="estadocivil">
@@ -129,12 +134,13 @@ $view = mysqli_fetch_array($result);
         $date_of_birth = $_POST["date_of_birth"];
         $nationality = $_POST["nationality"];
         $residence = $_POST["residence"];
+        $barrio = $_POST["barrio"];
         $marital_status = $_POST["marital_status"];
         $age = $_POST["age"];
         $sex = $_POST["sex"];
     /*Fin de la validacion de datos*/
         if(isset($_POST["buttonguardar"])){             /*Modificar los datos*/
-            $db_updating = "UPDATE patient SET name_patient='$name_patient', surname_patient='$surname_patient', ci_patient='$ci_patient', phone_patient='$phone_patient', date_of_birth='$date_of_birth', nationality='$nationality', residence='$residence', marital_status='$marital_status', age='$age', sex='$sex' WHERE id_patient=$id_patient";
+            $db_updating = "UPDATE patient SET name_patient='$name_patient', surname_patient='$surname_patient', ci_patient='$ci_patient', phone_patient='$phone_patient', date_of_birth='$date_of_birth', nationality='$nationality', residence='$residence', barrio='$barrio', marital_status='$marital_status', age='$age', sex='$sex' WHERE id_patient=$id_patient";
             $result = mysqli_query($conn, $db_updating);
             if($result){                                /*Mensaje de modificado exitoso*/
                 echo "<script> alert('Doctor/a modificado: $nombre $apellido');window.location= 'student' </script>";

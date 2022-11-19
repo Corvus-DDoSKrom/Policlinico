@@ -90,7 +90,7 @@ $view = mysqli_fetch_array($result);
                         </div>
                         <div>
                             <div>
-                                <h2>EXÁMEN FÍSICO - SIGNOS VITALES</h2>
+                                <h2>SIGNOS VITALES</h2>
                             </div>
                         </div>
                         <div class="div-4">
@@ -134,35 +134,34 @@ $view = mysqli_fetch_array($result);
                             <textarea rows="4" class="controls-11" style="resize: none;" name="antecedente_consulta"></textarea>
                         </div> <!--FIN ANTECEDENTE DE PACIENTE-->
                         <div>
-                            <label class="tam-label" for="diagnostico">DIAGNOSTICO</label>
+                            <label class="tam-label" for="fisico">EXAMEN FÍSICO</label>
+                            <br>
+                            <textarea rows="4" class="controls-11" style="resize: none;" name="fisico_consulta"></textarea>
+                        </div>
+                        <div>
+                            <label class="tam-label" for="impresion">DIAGNÓSTICO</label>
                             <br>
                             <textarea rows="4" class="controls-11" style="resize: none;" name="diagnostico"></textarea>
-                        </div> <!--FIN ANTECEDENTE DE PACIENTE-->
+                        </div>
                         <div>
-                            <h2>MEDIO AUXILIAR DE DIAGNOSTICO</h2>
-                            <label class="tam-label" for="auxiliar">DIAGNOSTICO AUXILIAR</label>
+                            <label class="tam-label" for="auxiliar">MEDIO AUXILIAR DE DIAGNÓSTICO</label>
                             <br>
                             <textarea rows="4" class="controls-11" style="resize: none;" name="auxiliar_consulta"></textarea>
                         </div> <!--FIN AUXILIAR DE PACIENTE-->
-                        <div>
-                            <label class="tam-label" for="impresion">IMPRESION DE DIAGNOSTICO</label>
-                            <br>
-                            <textarea rows="4" class="controls-11" style="resize: none;" name="impresion_consulta"></textarea>
-                        </div> <!--FIN IMPRESION DE PACIENTE-->
                         <div>
                             <label class="tam-label" for="tratamiento">TRATAMIENTO</label>
                             <br>
                             <textarea rows="4" class="controls-11" style="resize: none;" name="tratamiento_consulta"></textarea>
                         </div> <!--FIN TRATAMIENTO DE PACIENTE-->
                         <div>
-                            <label for="cie10">CIE10</label>
+                            <label class="tam-label" for="cie10">CIE10</label>
                             <br>
-                            <input class="controls-2" type="text" name="cie10_consulta">
+                            <input class="controls-11 " type="text" name="cie10_consulta">
                         </div> <!--FIN TRATAMIENTO DE PACIENTE-->
                         <div>
-                            <label for="proxima">PROXIMA CONSULTA</label>
+                            <label class="tam-label" for="proxima">PROXIMA CONSULTA</label>
                             <br>
-                            <input class="controls-2" type="text" name="proxima_consulta">
+                            <input class="controls-11" type="text" name="proxima_consulta">
                         </div> <!--FIN PROXIMA CONSULTA DE PACIENTE-->
                     </fieldset>
                     <br>
@@ -191,12 +190,12 @@ $view = mysqli_fetch_array($result);
         $pulso = $_POST["pulso_consulta"];
         $temperatura = $_POST["temperatura_consulta"];
         $auxiliar = $_POST["auxiliar_consulta"];
-        $impresion = $_POST["impresion_consulta"];
+        $fisico = $_POST["fisico_consulta"];
         $tratamiento = $_POST["tratamiento_consulta"];
         $cie10 = $_POST["cie10_consulta"];
         $proxima = $_POST["proxima_consulta"];
         /*Fin de la validacion de datos*/
-        $sql = "INSERT INTO detalle_consulta (motivo_consulta, antecedente_consulta, diagnostico, peso_consulta, fecha, altura_consulta, presion_consulta, respiracion_consulta, pulso_consulta, temperatura_consulta, auxiliar_consulta, impresion_consulta, tratamiento_consulta, cie10_consulta, proxima_consulta) VALUES ('$motivo', '$antecedente', '$diagnostico', '$peso', '$fecha', '$altura', '$presion', '$respiracion', '$pulso', '$temperatura', '$auxiliar', '$impresion', '$tratamiento', '$cie10', '$proxima')";
+        $sql = "INSERT INTO detalle_consulta (motivo_consulta, antecedente_consulta, fisico_consulta, diagnostico, peso_consulta, fecha, altura_consulta, presion_consulta, respiracion_consulta, pulso_consulta, temperatura_consulta, auxiliar_consulta, tratamiento_consulta, cie10_consulta, proxima_consulta) VALUES ('$motivo', '$antecedente', '$fisico', '$diagnostico', '$peso', '$fecha', '$altura', '$presion', '$respiracion', '$pulso', '$temperatura', '$auxiliar', '$tratamiento', '$cie10', '$proxima')";
         $result2 = mysqli_query($conn, $sql);
         $db_update = "UPDATE eventos SET estado='0' WHERE id = '$id'";
         $update = mysqli_query($conn, $db_update);

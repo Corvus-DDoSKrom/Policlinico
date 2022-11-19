@@ -37,7 +37,7 @@ if(isset($_GET["buttonlogin"])){
                 $_SESSION['user_logged_in'] = TRUE;
                 $_SESSION['privilege'] = 'ALUMNO';
             }elseif($privilege==4){ /*este apartado registra si el usuario es recepcionista*/
-                header("location:panel_reception");
+                header("location:agenda");
                 $_SESSION['user_logged_in'] = TRUE;
                 $_SESSION['privilege'] = 'RECEPCIONISTA';
             }

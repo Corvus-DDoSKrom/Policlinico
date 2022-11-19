@@ -48,11 +48,6 @@ mysqli_close($conn);
                             <h1>HISTORIAL</h1>
                         </div>
                     </div>
-                    <div class="div-3">
-                        <div class="div-add-user">
-                            <a class="myButton" href="register_user"><i class="fa-solid fa-plus"></i> Añadir nuevo usuario</a>
-                        </div>
-                    </div>
                 </div>
                 <fieldset class="form-4">
                     <table class="blueTable">
@@ -75,7 +70,7 @@ mysqli_close($conn);
                                 <td><?php echo $row['name_doctor']; ?></td>
                                 <td><?php echo $row['title']; ?></td>
                                 <td>
-                                    <a class="myButton-histo" href="report?id_consulta=<?php echo $row['id_consulta'];?>"><span></span>Ver historial</a>
+                                    <a class="myButton-histo" href="report?id_consulta=<?php echo $row['id_consulta'];?>" target="_blank"><span></span>Ver historial</a>
                                 </td>
                             </tr>
                             <?php 

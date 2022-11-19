@@ -63,7 +63,7 @@ ob_start();
         <fieldset class="form-9">
         <div>
             <div>
-                <h2>EXÁMEN FÍSICO - SIGNOS VITALES</h2>
+                <h2>SIGNOS VITALES</h2>
             </div>
         </div>
         <div>
@@ -110,22 +110,19 @@ ob_start();
             <textarea rows="4" class="controls-11" style="resize: none;" name="antecedente_consulta"><?php echo $view['antecedente_consulta']; ?></textarea>
         </div>
         <div>
-            <label class="tam-label" for="diagnostico">DIAGNOSTICO</label>
+            <label class="tam-label" for="fisico">EXAMEN FÍSICO</label>
+            <br>
+            <textarea rows="4" class="controls-11" style="resize: none;" name="fisico_consulta"><?php echo $view['fisico_consulta']; ?></textarea>
+        </div>
+        <div>
+            <label class="tam-label" for="diagnostico">DIAGNÓSTICO</label>
             <br>
             <textarea rows="4" class="controls-11" style="resize: none;" name="diagnostico"><?php echo $view['diagnostico']; ?></textarea>
         </div>
-        </fieldset>
-        <fieldset class="form-9">
         <div>
-            <h2>MEDIO AUXILIAR DE DIAGNOSTICO</h2>
-            <label class="tam-label" for="auxiliar">DIAGNOSTICO AUXILIAR</label>
+            <label class="tam-label" for="auxiliar">MEDIO AUXILIAR DE DIAGNÓSTICO</label>
             <br>
             <textarea rows="4" class="controls-11" style="resize: none;" name="auxiliar_consulta"><?php echo $view['auxiliar_consulta']; ?></textarea>
-        </div>
-        <div>
-            <label class="tam-label" for="impresion">IMPRESION DE DIAGNOSTICO</label>
-            <br>
-            <textarea rows="4" class="controls-11" style="resize: none;" name="impresion_consulta"><?php echo $view['impresion_consulta']; ?></textarea>
         </div>
         <div>
             <label class="tam-label" for="tratamiento">TRATAMIENTO</label>

@@ -18,7 +18,6 @@ RewriteRule ^edit_student$ edit_students.php
 RewriteRule ^edit_user$ edit_user.php
 RewriteRule ^panel_admin$ panel_admin.php
 RewriteRule ^panel_doctor$ panel_doctor.php
-RewriteRule ^panel_reception$ panel_reception.php
 RewriteRule ^register_doctor$ register_doctor.php
 RewriteRule ^register_patient$ register_patient.php
 RewriteRule ^register_specialty$ register_specialty.php

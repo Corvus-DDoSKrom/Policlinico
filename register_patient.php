@@ -86,6 +86,11 @@ if($privilege_admin !='RECEPCIONISTA'){
                                 <input class="controls-2" type="text" name="residence" id="residencia">
                             </div>
                             <div>
+                                <label for="barrio">BARRIO</label>
+                                <br>
+                                <input class="controls-2" type="text" name="barrio_patient" id="barrio">
+                            </div>
+                            <div>
                                 <label for="estadocivil">ESTADO CIVIL</label> <!--SI EL PACIENTE ESTA CASADO O SOLTERO O DIVORCIADO-->
                                 <br>
                                 <!--BOTON DE SECCIONAR EL ESTADO DEL PACIENTE-->
@@ -124,6 +129,7 @@ if($privilege_admin !='RECEPCIONISTA'){
         $date_of_birth = $_POST["date_of_birth"];
         $nationality = $_POST["nationality"];
         $residence = $_POST["residence"];
+        $barrio_patient = $_POST["barrio_patient"];
         $marital_status = $_POST["marital_status"];
         $age = $_POST["age"];
         $sex = $_POST["sex"];
@@ -133,7 +139,7 @@ if($privilege_admin !='RECEPCIONISTA'){
         $row = mysqli_num_rows($result);
         $view = mysqli_fetch_array($conn, $db_consulting);
         if($row==0){/* Este codigo sirve para verificar si todos los datos son correctos*/
-            $sql = "INSERT INTO patient (name_patient, surname_patient, ci_patient, phone_patient, date_of_birth, nationality, residence, marital_status, age, sex) VALUES ('$name_patient', '$surname_patient', '$ci_patient', '$phone_patient', '$date_of_birth', '$nationality', '$residence', '$marital_status', '$age', '$sex')";
+            $sql = "INSERT INTO patient (name_patient, surname_patient, ci_patient, phone_patient, date_of_birth, nationality, residence, barrio marital_status, age, sex) VALUES ('$name_patient', '$surname_patient', '$ci_patient', '$phone_patient', '$date_of_birth', '$nationality', '$residence', '$barrio_patient', '$marital_status', '$age', '$sex')";
             $result = mysqli_query($conn, $sql);
             if($result){/*si todo esta correcto procede a guardar en la base de datos*/
                     echo "<script> alert('Paciente $name_patient $surname_patient registrado con éxito.');window.location= 'agenda.php' </script>";
