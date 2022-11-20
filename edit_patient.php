@@ -123,7 +123,7 @@ $view = mysqli_fetch_array($result);
     <!--Inicio del codigo para registrar alumnos -->
     <?php
     require 'config/connection.php';
-    /* Aqui comienza la validacion de datos */
+    /*Aqui comienza la validacion de datos*/
     if(isset($_POST['name_patient'])){
         $id_patient = $_POST["id_patient"];
         $name_patient = $_POST["name_patient"];
