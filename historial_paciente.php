@@ -1,25 +1,25 @@
 <?php
 session_start();
-require 'includes/auth_validate.php';
-$privilege_admin = $_SESSION['privilege'];
-if($privilege_admin !='DOCTOR'){
+require 'includes/auth_validate.php'; //validacion de php
+$privilege_admin = $_SESSION['privilege']; // privilegio de administrador
+if($privilege_admin !='DOCTOR'){ // privilegio selecionado
     header("location:error-403");
 }
-$host = "localhost";
-$basededatos = "policlinico";
-$usuario = "root";
-$contraseña = "";
+$host = "localhost"; //la conexion
+$basededatos = "policlinico"; // llamara a la base de datos
+$usuario = "root"; // colocar usuarioo
+$contraseña = "";   // colocar contraseña
 
-$conexion = new mysqli($host, $usuario,$contraseña, $basededatos);
+$conexion = new mysqli($host, $usuario,$contraseña, $basededatos); // aqui llamara la conexion a la base de datos
 if ($conexion -> connect_error){
 	die("Fallo la conexion:(".$conexion -> mysqli_connect_errno().")".$conexion-> mysqli_connect_error());
 }
 
 $tabla="";
-$id_user2 = $_SESSION['name_doctor'];
+$id_user2 = $_SESSION['name_doctor']; //inicio de secion de doctor
 $query="SELECT*FROM consulta INNER JOIN patient ON consulta.id_patient = patient.id_patient INNER JOIN detalle_consulta ON consulta.id_detalle_consulta = detalle_consulta.id_detalle_consulta INNER JOIN doctor ON consulta.id_doctor = doctor.id_doctor INNER JOIN specialty ON consulta.id_specialty = specialty.id_specialty WHERE name_doctor='$id_user2' ORDER BY fecha ASC";
 
-if(isset($_POST['consulta'])){
+if(isset($_POST['consulta'])){ // tablas consulta
 	$q=$conexion->real_escape_string($_POST['consulta']);
 	$query="SELECT * FROM consulta INNER JOIN patient ON consulta.id_patient = patient.id_patient INNER JOIN detalle_consulta ON consulta.id_detalle_consulta = detalle_consulta.id_detalle_consulta INNER JOIN doctor ON consulta.id_doctor = doctor.id_doctor INNER JOIN specialty ON consulta.id_specialty = specialty.id_specialty WHERE 
 		name_patient LIKE '%".$q."%' OR
@@ -29,7 +29,7 @@ if(isset($_POST['consulta'])){
 }
 
 $buscarConsulta=$conexion->query($query);
-if ($buscarConsulta->num_rows > 0){
+if ($buscarConsulta->num_rows > 0){ //ciclo para buscar las consultas
 	$tabla.= 
 	'<table class="blueTable">
 		<thead>
@@ -43,7 +43,7 @@ if ($buscarConsulta->num_rows > 0){
 		</thead>
 		';
 
-	while($row= $buscarConsulta->fetch_assoc()){
+	while($row= $buscarConsulta->fetch_assoc()){ // un bucle para buscar consulta
 		$tabla.=
 		'<tbody id="datos">
 			<tr>
@@ -62,6 +62,6 @@ if ($buscarConsulta->num_rows > 0){
 }else{
 	$tabla="No se encontraron coincidencias con sus criterios de búsqueda.";
 }
-
+// fin del ciclo
 echo $tabla;
 ?>

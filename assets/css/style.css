@@ -581,6 +581,43 @@ h1{
     width: 100%;
 }
 
+.div-7{
+    width: 100%;
+    margin: 10px;
+    border: 2px solid #505050;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.div-7 h3{
+    margin: 10px;
+    font-size: 20px;
+}
+
+.div-8{
+    display: flex;
+    width: 45%;
+}
+
+.div-9{
+    border: 2px solid #1C6EA4;
+    font-size: 65px;
+    background-color: #0096FF;
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+    margin: 10px;
+    display: flex;
+}
+
+.div-10{
+    display: flex;
+    font-size: 80px;
+    text-decoration: none;
+    color: #e2e2e2;
+    margin: 5px;
+}
+
 table.blueTable {
     border: 1px solid #1C6EA4;
     background-color: #EEEEEE;

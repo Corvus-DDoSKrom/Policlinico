@@ -6,6 +6,15 @@ $privilege_admin = $_SESSION['privilege'];
 if($privilege_admin !='ADMINISTRADOR'){
     header("location:error-403");
 }
+$db_consulting="SELECT * FROM login";
+$result=mysqli_query($conn, $db_consulting);
+$view=mysqli_num_rows($result);
+$db_consulting2="SELECT * FROM doctor";
+$result2=mysqli_query($conn, $db_consulting2);
+$view2=mysqli_num_rows($result2);
+$db_consulting3="SELECT * FROM specialty";
+$result3=mysqli_query($conn, $db_consulting3);
+$view3=mysqli_num_rows($result3);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -50,9 +59,20 @@ if($privilege_admin !='ADMINISTRADOR'){
                         <h1>Panel de ADMINISTRADOR</h1>
                     </div>
                 </div>
-                <fieldset>
-                    
-                </fielset>
+                <div class="div-8">
+                    <div class="div-7">
+                        <h3>USUARIOS</h3>
+                        <a class="div-9" href="user"><i class=" div-10 fa-solid fa-user"></i><?php echo $view; ?></a>
+                    </div>
+                    <div class="div-7">
+                        <h3>DOCTORES</h3>
+                        <a class="div-9" href="doctor"><i class=" div-10 fa-solid fa-user-doctor"></i><?php echo $view2; ?></a>
+                    </div>
+                    <div class="div-7">
+                        <h3>ESPECIALIDADES</h3>
+                        <a class="div-9" href="specialty"><i class=" div-10 fa-solid fa-stethoscope"></i><?php echo $view3; ?></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -79,7 +79,7 @@ $view = mysqli_fetch_array($result);
                             <div>
                                 <label for="fechanacimiento">FECHA DE NACIMIENTO</label>
                                 <br>
-                                <input class="controls-2" type="date" name="date_of_birth" id="fechanacimiento" value="<?php echo $view['date_of_bith']; ?>">
+                                <input class="controls-2" type="date" name="date_of_birth" id="fechanacimiento" value="<?php echo $view['date_of_birth']; ?>">
                             </div>
                             <div>
                                 <label for="nacionalidad">NACIONALIDAD</label>

@@ -92,8 +92,7 @@ mysqli_close($conn);
                                 <td><?php echo $row['phone_patient'];?></td>
                                 <td><?php echo $row['date_of_birth'];?></td>
                                 <td><?php echo $row['nationality'];?></td>
-                                <td><?php echo $row['residence'];?></td>
-                                <td><?php echo $row['marital_status'];?></td>
+                                <td><?php echo $row['residence'];?></td>                                <td><?php echo $row['marital_status'];?></td>
                                 <td><?php echo $row['age'];?></td>
                                 <td><?php echo $row['sex'];?></td>
                                 <td>
